@@ -1,0 +1,734 @@
+[
+  {
+    "documentType": "KTP",
+    "columns": [
+      {
+        "name": "provinsi",
+        "label": "Provinsi",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "kota",
+        "label": "Kota",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nik",
+        "label": "NIK",
+        "type": "number",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nama",
+        "label": "Nama",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tempatLahir",
+        "label": "Tempat Lahir",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tanggalLahir",
+        "label": "Tanggal Lahir",
+        "type": "date",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "jenisKelamin",
+        "label": "Jenis Kelamin",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "golonganDarah",
+        "label": "Golongan Darah",
+        "type": "text",
+        "required": false,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "alamat",
+        "label": "Alamat",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "rtRw",
+        "label": "RT/RW",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "kelurahan",
+        "label": "Kelurahan",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "kecamatan",
+        "label": "Kecamatan",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "agama",
+        "label": "Agama",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "statusPerkawinan",
+        "label": "Status Perkawinan",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "pekerjaan",
+        "label": "Pekerjaan",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "kewarganegaraan",
+        "label": "Kewarganegaraan",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "berlakuHingga",
+        "label": "Berlaku Hingga",
+        "type": "date",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "documentType": "STNK",
+    "columns": [
+      {
+        "name": "nomorDokumen",
+        "label": "Nomor Dokumen",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorPolisi",
+        "label": "Nomor Polisi",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nama",
+        "label": "Nama",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "identitasPemilik",
+        "label": "Identitas Pemilik",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "alamat",
+        "label": "Alamat",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "merk",
+        "label": "Merk",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "warna",
+        "label": "Warna",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tipe",
+        "label": "Tipe",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "bahanBakar",
+        "label": "Bahan Bakar",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "jenis",
+        "label": "Jenis",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "warnaTnkb",
+        "label": "Warna TNKB",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "model",
+        "label": "Model",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tahunRegistrasi",
+        "label": "Tahun Registrasi",
+        "type": "number",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tahunPembuatan",
+        "label": "Tahun Pembuatan",
+        "type": "number",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorBpkb",
+        "label": "Nomor BPKB",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "isiSilinder",
+        "label": "Isi Silinder",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "kodeLokasi",
+        "label": "Kode Lokasi",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorRangka",
+        "label": "Nomor Rangka",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorUrutPendaftaran",
+        "label": "Nomor Urut Pendaftaran",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorMesin",
+        "label": "Nomor Mesin",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "berlakuSampai",
+        "label": "Berlaku Sampai",
+        "type": "date",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "documentType": "FAKTUR",
+    "columns": [
+      {
+        "name": "nomorDokumen",
+        "label": "Nomor Dokumen",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorFaktur",
+        "label": "Nomor Faktur",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tanggalFaktur",
+        "label": "Tanggal Faktur",
+        "type": "date",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nama",
+        "label": "Nama",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "alamat",
+        "label": "Alamat",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "identitasPemilik",
+        "label": "Identitas Pemilik",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "merk",
+        "label": "Merk",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "type",
+        "label": "Type",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "jenis",
+        "label": "Jenis",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "model",
+        "label": "Model",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tahunPembuatan",
+        "label": "Tahun Pembuatan",
+        "type": "number",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "isiSilinder",
+        "label": "Isi Silinder",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "warna",
+        "label": "Warna",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorRangka",
+        "label": "Nomor Rangka",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorMesin",
+        "label": "Nomor Mesin",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "bahanBakar",
+        "label": "Bahan Bakar",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "harga",
+        "label": "Harga",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "formulirAB",
+        "label": "Formulir AB",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "pib",
+        "label": "PIB",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tpt",
+        "label": "TPT",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "sut",
+        "label": "SUT",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "srut",
+        "label": "SRUT",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "documentType": "BPKB",
+    "columns": [
+      {
+        "name": "nomorDokumen",
+        "label": "Nomor Dokumen",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nama",
+        "label": "Nama",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "pekerjaan",
+        "label": "Pekerjaan",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "alamat",
+        "label": "Alamat",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorKtpTdp",
+        "label": "Nomor KTP/TDP",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "dikeluarkanDi",
+        "label": "Dikeluarkan Di",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tanggal",
+        "label": "Tanggal",
+        "type": "date",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorRegistrasi",
+        "label": "Nomor Registrasi",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "warna",
+        "label": "Warna",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "merek",
+        "label": "Merek",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorRangkaNikVin",
+        "label": "Nomor Rangka/NIK/VIN",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "type",
+        "label": "Type",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorMesin",
+        "label": "Nomor Mesin",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "jenis",
+        "label": "Jenis",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "bahanBakar",
+        "label": "Bahan Bakar",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "model",
+        "label": "Model",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "jumlahSumbu",
+        "label": "Jumlah Sumbu",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tahunPembuatan",
+        "label": "Tahun Pembuatan",
+        "type": "number",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "jumlahRoda",
+        "label": "Jumlah Roda",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "isiSilinder",
+        "label": "Isi Silinder",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorFaktur",
+        "label": "Nomor Faktur",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "tanggalFaktur",
+        "label": "Tanggal Faktur",
+        "type": "date",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "namaApmImportir",
+        "label": "Nama APM/Importir",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorPib",
+        "label": "Nomor PIB",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorSutSrut",
+        "label": "Nomor SUT/SRUT",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "nomorTpt",
+        "label": "Nomor TPT",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "noFormABC",
+        "label": "No Form A/B/C",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "lainLain",
+        "label": "Lain-Lain",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "text",
+        "required": true,
+        "defaultValue": null,
+        "disabled": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,150 @@
+{
+  "ad": {
+    "ClientID": "8B85ED5EE9BF35E2E05400144FFBD319",
+    "ApplicationID": "DEA",
+    "Key": "klienIniUnTukgd4EaAcH4nL"
+  },
+  "dea": {
+    "AuthorizationId": "dXNlcmFkbQ==",
+    "AuthorizationPassword": "4297F44B13955235245B2497399D7A93",
+    "Separator": ":",
+    "Approval": "1",
+    "MaxUploadNasabah": 5,
+    "MaxUploadInternal": 150,
+    "mybcaportal": "http://mybcaportal/DEA/Keterangan/"
+  },
+  "messages": {
+    "login": {
+      "notRegisted": "User ID atau password yang dimasukkan salah",
+      "wrongID": "User ID atau password yang dimasukkan salah",
+      "alreadyLogin": "User telah log in pada perangkat lain"
+    },
+    "logout": {
+      "logout": "Log out dari Sistem?"
+    },
+    "searchDocument": {
+      "nullCategory": "Tidak ada pencarian yang dipilih",
+      "rekeningNotFound": "NO REKENING tidak ditemukan",
+      "CISNotFound": "No. CIS tidak ditemukan",
+      "documentEdited": "Sedang diubah oleh"
+    },
+    "addDocument": {
+      "CISNotFound": "No. CIS tidak ditemukan",
+      "cancelAddDocument": "Jika batal, semua informasi yang dimasukkan akan dihapus",
+      "updloadDocument": "Pastikan image dan isian data sudah benar",
+      "uploadSucces": " berhasil diupload",
+      "dataNotComplete": "Isian data belum lengkap",
+      "versioningFailed": "Dokumen yang sudah ada memiliki tanggal kadaluarsa terbaru"
+    },
+    "editDocument": {
+      "documentEdited": "Sedang diubah oleh ",
+      "editingFailed": "Harap masukkan keterangan dokumen yang berbeda",
+      "editDocumentSucces": "Perubahan dokumen menunggu persetujuan supervisor",
+      "cancelEditDocument": "Jika klik batal, perubahan pada dokumen tidak akan tersimpan"
+    },
+    "deleteDocument": {
+      "deleteConfirm": "Apakah yakin menghapus dokumen ini?",
+      "deleteSucces": "Penghapusan dokumen menunggu persetujuan supervisor"
+    },
+    "revisionDocument": {
+      "uploadRevision": "Apakah yakin mengubah dokumen ini?",
+      "uploadRevisionNotes": "",
+      "uploadRevisionSucces": "Revisi dokumen menunggu persetujuan supervisor",
+      "cancelUploadRevision": "Jika klik batal, dokumen akan tersimpan sebagai draft revisi dan perlu ditindaklanjuti",
+      "uploadRevisionFailed": "Revisi dokumen gagal. Silahkan ulangi"
+    },
+    "errorUpload": {
+      "uploadFailed": "Upload dokumen gagal. Silahkan ulangi"
+    },
+    "approvalDocument": {
+      "approvalSucces": "Dokumen dikembalikan ke operator",
+      "declineDocument": "Dokumen yang sudah ditolak tidak dapat diakses kembali, apakah Anda yakin?",
+      "declineAddDocument": "Penambahan dokumen berhasil ditolak",
+      "declineEditDocument": "Ubah  dokumen berhasil ditolak",
+      "declineDeleteDocument": "Penghapusan dokumen berhasil ditolak",
+      "acceptAddDocument": "Pastikan semua informasi dokumen sudah tepat",
+      "acceptAddDocumentNotif": "Penambahan dokumen berhasil dilakukan",
+      "acceptEditDocument": "Pastikan gambar dan isian data sudah benar",
+      "acceptEditDocumentNotif": "Perubahan dokumen berhasil",
+      "acceptDeleteDocument": "Dokumen yang sudah dihapus tidak dapat diakses kembali, apakah Anda yakin?",
+      "acceptDeleteDocumentNotif": "Penghapusan dokumen berhasil",
+      "declineAddMessage": "Dokumen yang sudah ditolak tidak dapat diakses, apakah Anda yakin?",
+      "declineEditMessage": "Dokumen yang sudah ditolak tidak dapat diakses kembali, apakah Anda yakin?",
+      "declineDeleteMessage": "Dokumen yang sudah ditolak tidak dapat diakses kembali, apakah Anda yakin?"
+    },
+    "addUser": {
+      "addUser": "Pastikan hak akses user sudah benar",
+      "userRegistered": "User sudah terdaftar",
+      "userNotFound": "User ID tidak ditemukan",
+      "fieldMandatory": "wajib diisi"
+    },
+    "updateUser": {
+      "updateUser": "Pastikan hak akses user sudah benar",
+      "updateSucces": "Perubahan hak akses user berhasil",
+      "userNotFound": "User ID tidak ditemukan",
+      "fieldMandatory": "wajib diisi",
+      "deleteUser": "Menghapus user dari database dan tidak bisa dibatalkan",
+      "deleteUserNotif": "User berhasil dinonaktifkan"
+    },
+    "systemError": {
+      "systemError": "Sistem sedang bermasalah, silahkan ulangi kembali setelah beberapa saat"
+    }
+  },
+  "url": {
+    "api3": {
+      "login": "/oauth/token",
+      "detailCurrentUser": "/ords/ords/ords/nasabah/login",
+      "getSearchDocumentHeader": "/ords/ords/ords/ui/header",
+      "getSearchDocument": "/ords/ords/ords/nasabah/dokumen",
+      "getIdentitas": "/ords/ords/ords/nasabah/identitas",
+      "getRekening": "/ords/ords/ords/nasabah/rekening",
+      "apiMetadata": "/ords/ords/ords",
+      "getDocument": "/ords/ords/ords",
+      "getPendingDocument": "/ords/ords/ords/supervisor/document",
+      "getStatusDocument": "/ords/ords/ords/nasabah/revision",
+      "getPendingMetadata": "/ords/ords/ords/supervisor/pending",
+      "getAllUser": "/ords/ords/ords/admin/user",
+      "postUser": "/ords/ords/ords/admin/user",
+      "getUser": "/ords/ords/ords/nasabah/user",
+      "getUserAD": "/ords/ords/ords/ad/user",
+      "getRoles": "/ords/ords/ords/ui/roles",
+      "getGroupFungsi": "/ords/ords/ords/admin/group",
+      "masterData": "/api/masterdata",
+      "documentFiles": "/api/document-files",
+      "file": "/api/local/file",
+      "getPreviewDocument": "/ords/ords/ords/nasabah/preview",
+      "getDownload": "/ords/ords/ords/nasabah/file",
+      "getNasabahKategori2": "/ords/ords/ords/ui/category",
+      "getDocumentType": "/ords/ords/ords/nasabah/documenttype",
+      "approveInsertDoc": "/ords/ords/ords/supervisor/insert",
+      "approveDeleteDoc": "/ords/ords/ords/supervisor/delete",
+      "approveUpdateDoc": "/ords/ords/ords/supervisor/update",
+      "deleteMetadataIdentitas": "/ords/ords/ords/nasabah/identitas",
+      "revisionMetadataIdentitas": "/ords/ords/ords/supervisor/revision",
+      "rejectInsertDoc": "/ords/ords/ords/supervisor/insert",
+      "rejectUpdateDoc": "/ords/ords/ords/supervisor/update",
+      "rejectDeleteDoc": "/ords/ords/ords/supervisor/delete",
+      "getCategorySearch": "/ords/ords/ords/ui/searchby",
+      "getPageFile": "/api/service-download/pageFile",
+      "triggerUpload": "/api/service-upload/auto-upload",
+      "getPreviewFile": "/api/service-download/previewImage",
+      "getPageFileDownload": "/api/service-download/downloadInfo",
+      "downloadFile": "/api/service-download/download",
+      "getVersion": "/ords/ords/ords/nasabah/version",
+      "getListRekening": "/cis/deposits/accounts/cis-no",
+      "getNamaNasabah": "/cis/db2",
+      "listLaporan": "/ords/ords/ords/admin/listlaporan",
+      "listKategori": "/ords/ords/ords/admin/listkategori",
+      "auditTrail": "/ords/ords/ords/admin/laporan",
+      "checkOut": "/ords/ords/ords/nasabah/checkout",
+      "checkIn": "/ords/ords/ords/nasabah/checkin",
+      "getLockOwner": "/ords/ords/ords/ui/lock",
+      "getLogDocument": "/ords/ords/ords/nasabah/audit",
+      "logout": "/ords/ords/ords/nasabah/logout",
+      "getCategory": "/ords/ords/ords/ui/category/all",
+      "postCategory": "/ords/ords/ords/ui/category/add",
+      "putCategory": "/ords/ords/ords/ui/category/update",
+      "delCategory": "/ords/ords/ords/ui/category/delete"
+    }
+  }
+}
