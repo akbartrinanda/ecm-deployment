@@ -1,0 +1,40 @@
+version: '3'
+services:
+  solr:
+    image: solr
+    ports:
+     - "8983:8983"
+    volumes:
+      - solr-data:/var/solr
+    command: >
+      sh -c "precreate-core document; exec solr -f"
+  postgres:
+    image: postgres:0.1
+    network_mode: bridge
+    container_name: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=docker
+      - POSTGRES_DB=docker
+    restart: unless-stopped
+  # APP Admin Service
+  admin-services:
+    image: admin-services:0.1
+    network_mode: bridge
+    container_name: admin-services
+    expose:
+      - 7070
+    ports:
+      - 7070:7070
+    volumes:
+      - ./admin-services:/app
+    restart: unless-stopped
+volumes:
+  solr-data: 
+  postgres-data:
