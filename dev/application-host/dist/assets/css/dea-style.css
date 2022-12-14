@@ -1,0 +1,1170 @@
+/* GLOBAL */
+body {
+    overflow: hidden;
+}
+.dea-marginBot {
+    margin-bottom: 24px !important;
+}
+.form-control,
+.ng-select .ng-select-container {
+    border: 1px solid #455a64 !important;
+    height: 38px !important;
+}
+label.form-control {
+    height: auto !important;
+    min-height: 32px !important;
+}
+textarea.form-control {
+    height: 96px !important;
+}
+
+/* CUSTOM VIEW PREVIEW IMAGE CONTAINER SIZE */
+#image-gallery {
+    height: 50vh !important;
+}
+.dea-noBorder {
+    border: none !important;
+}
+/* ---------------------------------------- */
+
+.dea-capitalize .ng-value::first-letter,
+.dea-capitalize .ng-option::first-letter {
+    text-transform: capitalize;
+}
+.ng-select-focused .ng-select-container {
+    border-color: #005cab !important;
+    border-width: 2px !important;
+    box-shadow: none !important;
+    outline: none;
+}
+.ng-select.select-error.ng-invalid .ng-select-container {
+    border: 2px solid #d50000 !important;
+}
+.ng-select-focused.select-error .ng-select-container {
+    border-color: #005cab !important;
+}
+.ng-dropdown-panel .scroll-host {
+    text-align: left;
+}
+.ng-option-selected {
+    background-color: #c6dffa !important;
+}
+.ng-option-marked {
+    background-color: #c6dffa !important;
+}
+.ng-option-label {
+    font-weight: lighter !important;
+}
+input:focus {
+    border-color: #005cab !important;
+    border-width: 2px !important;
+    box-shadow: none !important;
+    outline: none;
+}
+select:focus {
+    border: 2px solid #005cab !important;
+    box-shadow: none !important;
+    outline: none;
+}
+input[type=date]::-webkit-inner-spin-button, /* up */
+input[type=date]::-webkit-outer-spin-button, /* down */
+input[type=number]::-webkit-inner-spin-button, /* up */
+input[type=number]::-webkit-outer-spin-button, /* down */
+input[type=date]::-webkit-calendar-picker-indicator /* datepicker*/ {
+    display: none;
+}
+.dea-content {
+    overflow: hidden;
+}
+.dea-space {
+    margin-top: 50px;
+}
+.dea-space2 {
+    margin-top: 20px;
+}
+.dea-table,
+.dea-tableSorting {
+    margin-bottom: 0 !important;
+    /* border-radius: 4px; */
+    /* border-collapse: collapse; */
+    border: solid 1px #babdbe;
+}
+.dea-table thead,
+.dea-tableSorting thead {
+    background-color: #5388dd;
+    color: white;
+}
+.dea-table th {
+    font-size: 12px;
+    padding: 12px 30px !important;
+}
+.dea-tableSorting th {
+    font-size: 12px;
+    padding: 12px 30px 4px 30px !important;
+}
+.dea-table td,
+.dea-tableSorting td {
+    font-size: 14px;
+    padding: 6px 30px !important;
+}
+.dea-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.dea-font {
+    font-size: 14px !important;
+}
+.pagination-previous span {
+    display: none;
+}
+.pagination-previous.disabled::before {
+    content: "<" !important;
+    color: #dadada;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.pagination-next span {
+    display: none;
+}
+.pagination-next.disabled::after {
+    content: ">" !important;
+    color: #dadada;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.ngx-pagination .current {
+    background: none !important;
+    color: black !important;
+    font-weight: bold;
+}
+.ngx-pagination li a span {
+    color: #005cab;
+}
+.ngx-pagination li a:hover {
+    background: none !important;
+    text-decoration: none;
+}
+.pagination-next a,
+.pagination-previous a {
+    font-size: 0px;
+    visibility: hidden;
+}
+.pagination-previous a::before {
+    content: "<" !important;
+    color: #005cab;
+    visibility: visible;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.pagination-next a::after {
+    content: ">" !important;
+    color: #005cab;
+    visibility: visible;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.dea-inputDisable {
+    border: none !important;
+    background: none !important;
+    font-weight: bolder !important;
+    color: black !important;
+}
+
+/* DEA LOGIN */
+@media (max-height: 900px) {
+    .dea-logoSide {
+        background: linear-gradient(-49deg, #00579f 50%, #0061ae 50%);
+    }
+}
+@media (min-height: 901px) {
+    .dea-logoSide {
+        background: linear-gradient(-60deg, #00579f 50%, #0061ae 50%);
+    }
+}
+.dea-login {
+    margin: 0px !important;
+}
+.dea-logo {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.dea-logo h1 {
+    color: white;
+    font-size: 44px;
+    text-align: center;
+}
+.dea-logo h2 {
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+.dea-logo img {
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.formLogin {
+    background: white;
+    position: relative;
+}
+.dea-loginContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+}
+.dea-loginContainer form {
+    margin-top: 80px;
+}
+.dea-loginContainer h2 {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+/* .form-group{
+    margin-top:30px;
+}
+.form-group label{
+    font-size: 20px;
+    color: black;
+    margin-right: 30px;
+} */
+.btnlogin {
+    height: 40px;
+    margin-top: 20px;
+    width: 128px;
+    background: #005cab;
+    border: none;
+}
+.dea-errorMessage {
+    margin-top: 30px;
+    color: red;
+    padding: 0% 22%;
+}
+
+/* ADD DOCUMENT */
+.dea-addFile {
+    background-color: #fafafa;
+    margin: 10px 0px !important;
+    padding: 0px !important;
+    height: 55vh;
+}
+.dea-metadataCol {
+    height: 55vh;
+    overflow: auto;
+}
+.dea-absolutePosition {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(78, 78, 78, 0.658);
+    border-radius: 5px;
+}
+.dea-iconTrash {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    color: white;
+}
+.dea-divZoom {
+    position: relative;
+    bottom: 50px;
+}
+.dea-zoomBg {
+    background-color: red;
+}
+.dea-zoom {
+    background-color: rgba(78, 78, 78, 0.658) !important;
+    /* width: 240px !important; */
+    /* height: 36px !important; */
+    color: white !important;
+    border: none !important;
+    border-radius: 0px !important;
+    font-size: 14px !important;
+    /* margin: 0px; */
+}
+.dea-zoomBtn1 {
+    background-color: rgba(78, 78, 78, 0.658) !important;
+    width: 80px !important;
+    height: 32px !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 0px 5px 5px 0px !important;
+    font-size: 14px !important;
+}
+/* .dea-zoomBtn1:hover, .dea-zoomBtn2:hover{
+    box-shadow: none !important;
+} */
+.dea-zoomBtn2 {
+    background-color: rgba(78, 78, 78, 0.658) !important;
+    width: 80px !important;
+    height: 32px !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px 0px 0px 5px !important;
+    font-size: 14px !important;
+}
+.dea-formInput,
+.dea-selectRek,
+.dea-formSelect,
+.dea-formOptional {
+    position: relative;
+}
+.dea-formInput label,
+.dea-formSelect label,
+.dea-formOptional label,
+.dea-formOptional label,
+.dea-formInput .dea-no-value.ng-valid ~ label {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    pointer-events: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+.dea-selectRek label {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    pointer-events: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+.dea-formInput input,
+.dea-selectRek input {
+    position: relative;
+    z-index: 0;
+}
+.dea-formInput a img,
+.dea-formOptional a img,
+.dea-dateIcon a img {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    z-index: 1;
+}
+.dea-formInput input:focus,
+.dea-selectRek input:focus {
+    position: relative;
+    z-index: 1;
+}
+.dea-formInput input:disabled,
+.dea-formInput input:read-only {
+    background: white;
+}
+.dea-formInput input:focus ~ label,
+.dea-formInput .ng-valid ~ label,
+.dea-formInput .dea-has-value ~ label,
+.dea-formSelect .ng-select-focused ~ label,
+.dea-formSelect .ng-select-opened ~ label,
+.dea-formSelect .ng-valid ~ label,
+.dea-formOptional input:focus ~ label,
+.dea-formOptional .dea-has-value ~ label,
+.dea-formInput .dea-invalidConditional .ng-invalid ~ label,
+.dea-formInput.dea-invalidConditional .ng-invalid ~ label,
+.dea-formInput .dea-no-value.ng-valid:focus ~ label,
+.dea-formOptional.dea-invalidConditional label,
+.dea-formOptional.dea-dateValue label {
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    font-size: 12px;
+    padding: 0px 2px;
+    background: white;
+    color: #455a64;
+    transition: 0.3s;
+    z-index: 4;
+}
+.dea-selectRek .ng-select-focused ~ label,
+.dea-selectRek .ng-select-opened ~ label,
+.dea-selectRek .ng-select.dea-has-value ~ label {
+    position: absolute;
+    top: -10px;
+    left: 13px;
+    font-size: 12px;
+    padding: 0px 2px;
+    background: white;
+    color: #455a64;
+    transition: 0.3s;
+    z-index: 4;
+}
+.dea-formSelect .ng-select.ng-select-opened .ng-select-container,
+.dea-selectRek .ng-select.ng-select-opened .ng-select-container {
+    z-index: 3 !important;
+}
+.dea-formSelect .ng-select.ng-select-opened .ng-dropdown-panel,
+.dea-selectRek .ng-select.ng-select-opened .ng-dropdown-panel {
+    z-index: 5 !important;
+}
+.dea-datePick {
+    position: relative;
+    z-index: 0 !important;
+    border-radius: 0px 4px 4px 0px !important;
+}
+.dea-tooltipWarning,
+.dea-tooltipHint,
+.dea-Hint,
+.dea-formInput .ng-valid ~ .dea-tooltipWarning,
+.dea-formSelect .ng-valid ~ .dea-tooltipWarning,
+.ng-invalid ~ .dea-tooltip,
+.ng-valid ~ .dea-tooltip,
+.select-error.ng-valid ~ .dea-tooltip {
+    display: none;
+}
+.dea-formInput.dea-no-value .ng-invalid ~ .dea-tooltipWarning,
+.dea-formSelect.dea-no-value .ng-invalid ~ .dea-tooltipWarning,
+.select-error.ng-invalid ~ .dea-tooltip {
+    display: initial;
+}
+.dea-formInput.dea-no-value input.ng-invalid,
+.dea-formSelect.dea-no-value .ng-select.ng-invalid .ng-select-container {
+    border: 1px solid #d50000 !important;
+}
+.dea-tooltipWarningText {
+    width: 200px;
+    background-color: #d50000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 20%;
+    margin-left: -60px;
+    font-size: 12px;
+}
+.dea-tooltipWarningText::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #d50000 transparent transparent;
+    transform: rotate(90deg);
+}
+.dea-tooltipHintText {
+    width: 200px;
+    background-color: #455a64;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 12px;
+}
+.dea-tooltipHintText::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #455a64 transparent transparent;
+    transform: rotate(90deg);
+}
+.dea-formInput input:focus ~ .dea-tooltipHint,
+/* .dea-formInput input:focus ~ img, */
+.dea-formInput a img:hover ~ .dea-Hint,
+.dea-formOptional a img:hover ~ .dea-Hint,
+.dea-formInput .dea-invalidConditional ~ .dea-warningMessage,
+.dea-formInput.dea-invalidConditional ~ .dea-warningMessage,
+.dea-formOptional .dea-invalidConditional  ~ .dea-warningMessage,
+.dea-formOptional.dea-invalidConditional  ~ .dea-warningMessage {
+    display: initial;
+}
+.dea-formInput .dea-invalidConditional .ng-invalid,
+.dea-formInput .dea-invalidConditional .ng-invalid:focus,
+.dea-formInput.dea-invalidConditional .ng-invalid,
+.dea-formInput.dea-invalidConditional .ng-invalid:focus,
+.dea-formOptional .dea-invalidConditional .ng-invalid,
+.dea-formOptional .dea-invalidConditional .ng-invalid:focus,
+.dea-formOptional.dea-invalidConditional .ng-invalid,
+.dea-formOptional.dea-invalidConditional .ng-invalid:focus {
+    border: 2px solid #d0021b !important;
+}
+.dea-formInput .dea-invalidConditional .ng-invalid ~ label,
+.dea-formInput.dea-invalidConditional .ng-invalid ~ label,
+.dea-formOptional .dea-invalidConditional .ng-invalid ~ label,
+.dea-formOptional.dea-invalidConditional .ng-invalid ~ label {
+    color: #d0021b;
+}
+.dea-warningMessageText {
+    color: #d50000;
+    font-weight: bold;
+    font-size: 10px;
+    position: initial;
+}
+.dea-warningMessage {
+    display: none;
+}
+.dea-HintText {
+    width: 200px;
+    background-color: #455a64;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 5;
+    /* top: 0px;
+    left: 50%; */
+    bottom: 100%;
+    right: 0%;
+    margin-left: -60px;
+    font-size: 12px;
+}
+.dea-HintText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #455a64 transparent transparent;
+    transform: rotate(-90deg);
+}
+.dea-dateInputBorder {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.dea-datePickerBorder {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* SIDEBAR */
+.dea-sidebar {
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+.dea-fix-sidebar {
+    width: 64px !important;
+    /* padding-top: 0px; */
+    padding-top: 10px;
+}
+.dea-sidebar-background {
+    position: fixed;
+    width: 1%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.603);
+    z-index: 5;
+    visibility: hidden;
+}
+.dea-sidebar-hide {
+    visibility: hidden;
+    color: black;
+    margin-left: 10px;
+}
+.dea-sidebar-active {
+    margin-left: 3px;
+    background: #c6dffa;
+    border-left: 5px solid #fbb844;
+    width: 57px;
+    -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.3s;
+}
+.dea-sidebar-active .dea-icon {
+    margin-left: -8px;
+}
+/* .dea-sidebar-active a span{
+    margin-left: 24px !important;
+} */
+/* .dea-sidebar-active::before{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: #fbb844;
+} */
+.dea-sidebar:hover {
+    width: 230px;
+}
+.dea-sidebar:hover ~ .dea-sidebar-background {
+    visibility: visible;
+    width: 100%;
+    /* -webkit-transition: width 0.3s;
+    transition: width 0.3s; */
+}
+.dea-sidebar:hover .dea-sidebar-active {
+    width: 222px;
+    -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.3s;
+}
+
+.dea-sidebar:hover .dea-sidebar-hide {
+    visibility: visible;
+    -webkit-transition-delay: 0.2s; /* Safari */
+    transition-delay: 0.2s;
+}
+.dea-sidebar:hover .dea-subMenu {
+    display: initial;
+}
+.dea-sidebar:hover .dea-subMenu.dea-collapse {
+    display: none;
+}
+.dea-subMenu {
+    /* margin-left: 24px; */
+    /* overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s; */
+    display: none;
+    position: relative;
+    width: max-content;
+}
+.dea-subMenu.dea-collapse {
+    display: none;
+}
+.dea-subMenu a {
+    border-radius: 0 !important;
+}
+.dea-subMenu div a span {
+    margin-left: 32px;
+}
+.dea-subMenu .dea-sidebar-active a span {
+    margin-left: 24px;
+}
+.dea-menu-active .dea-nasabah {
+    color: #005cab;
+}
+/* .nav-item:target .dea-subMenu{
+    max-height: inherit;
+} */
+.dea-modal-content {
+    text-align: center;
+    font-weight: bold;
+    /* height: 360px !important;
+    width: 400px !important; */
+    /* padding: 0px 8px !important;    */
+
+    /* For Modal's Loading */
+    /* background-color: #fbfbfb;
+    padding: 0px !important; */
+}
+.dea-loaderBG {
+    background-color: #fbfbfb !important;
+}
+.dea-modalContainer {
+    height: 360px !important;
+    width: 400px !important;
+}
+.dea-menu-active .nasabah-image-active,
+.dea-menu-active .internal-image-active {
+    filter: invert(13%) sepia(91%) saturate(7252%) hue-rotate(199deg) brightness(92%) contrast(100%);
+}
+
+/* Search-Document Page */
+.dea-searchContainer {
+    position: relative;
+    top: 25%;
+}
+/* .dea-searchContainer{
+    position: fixed;
+    top: 65%;
+    left: 45%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+} */
+.dea-searchCard {
+    margin-top: 50px;
+}
+.dea-formBox {
+    text-align: center;
+}
+.dea-search {
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.dea-selectSearch {
+    width: 200px;
+    margin-right: 20px;
+    padding: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("/assets/img/icon/dropdown.png");
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+}
+.dea-keywordSearch {
+    width: 320px;
+    padding: 15px;
+}
+.dea-searchBy {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline;
+    font-size: 20px;
+    /* margin-right: 10px; */
+}
+.dea-btnSearch {
+    margin-top: 50px;
+    text-align: center;
+}
+.dea-btnSearch button {
+    width: 128px;
+    height: 36px;
+}
+.dea-otherDoc {
+    float: left;
+    margin-top: 8px;
+}
+.dea-otherDocBtn {
+    width: 248px !important;
+    height: 36px !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    background: #005cab !important;
+    border: 1px solid #005cab !important;
+    color: white !important;
+    letter-spacing: 1.25px;
+}
+.dea-pagination {
+    float: right;
+    margin-top: 8px;
+    font-size: 12px;
+}
+.dea-filterInternal {
+    margin-top: 64px;
+    margin-bottom: 12px;
+}
+/* .dea-btnSearch button:disabled{
+    width: 128px;
+    height: 36px;
+} */
+
+/* View Document Page */
+.dea-imageView {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: black;
+}
+/* .dea-imageView-menu a img:hover ~ .dea-titleIcon{ */
+.dea-imageView-menu a:hover ~ .dea-titleIcon {
+    display: initial;
+}
+.dea-showFile {
+    margin: 10px 2px !important;
+    height: 55vh;
+}
+.dea-metadataView {
+    height: 60vh;
+    overflow: auto;
+}
+.polri-metadataView {
+    height: 50vh;
+    overflow: auto;
+}
+.dea-metadataViewRevisi {
+    height: 61vh;
+    overflow: auto;
+}
+.dea-titleIcon {
+    width: 100px;
+    display: none;
+    background-color: #455a64;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    /* left: 50%; */
+    margin-left: -60px;
+    font-size: 12px;
+}
+.dea-titleIcon::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #455a64 transparent;
+}
+.dea-imageContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: #005cab;
+}
+.dea-imageView img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.dea-imageView-menuHeader {
+    display: flex;
+}
+.dea-imageView-listMenu {
+    list-style-type: none;
+    /* margin: auto; */
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 0px;
+    margin-bottom: auto;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+}
+.dea-imageView-menu {
+    float: right;
+    /* margin: 10px; */
+    padding: 10px;
+}
+/* .icon-white{
+    color: white !important;
+} */
+/* .dea-viewDocument-btn{
+    margin-top: 30px !important;
+    margin-bottom: 50px;
+} */
+.dea-viewDocument-btnYes {
+    /* margin-left: 5px; */
+    width: 128px;
+    height: 38px;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    background: #005cab !important;
+    border: 1px solid #005cab !important;
+    color: white !important;
+    letter-spacing: 1.25px;
+    /* outline: none !important; */
+}
+.dea-viewDocument-btnYes:disabled {
+    background-color: #6d6d6d !important;
+    border: 1px solid #6d6d6d !important;
+}
+.dea-viewDocument-btnNo {
+    /* margin-right: 5px; */
+    width: 128px;
+    height: 38px;
+    font-size: 14px !important;
+    border: #005cab solid 1px !important;
+    color: #005cab !important;
+    border-radius: 8px !important;
+    letter-spacing: 1.25px;
+}
+.dea-viewDocument-btnNo:hover {
+    /* color: white !important;
+    background: maroon !important;
+    border: maroon solid 1px !important; */
+    border: #005cab solid 1px !important;
+    color: #005cab !important;
+    background: white !important;
+}
+.dea-viewDocument-btnRevisi {
+    width: 128px !important;
+    height: 38px !important;
+    font-size: 14px !important;
+    color: white !important;
+    background: orangered !important;
+    border: 1px solid orangered !important;
+    border-radius: 8px !important;
+    letter-spacing: 1.25px;
+}
+.dea-viewDocument-btnEdit {
+    font-size: 14px !important;
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 8px !important;
+    border: #005cab solid 1px !important;
+    color: #005cab !important;
+    letter-spacing: 1.25px;
+}
+.dea-viewDocument-btnDelete {
+    font-size: 14px !important;
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 8px !important;
+    border: #005cab solid 1px !important;
+    color: #005cab !important;
+    letter-spacing: 1.25px;
+}
+.dea-viewDocument-btnEdit:hover {
+    color: white !important;
+    background: #005cab !important;
+    border: #005cab solid 1px !important;
+}
+.dea-viewDocument-btnDelete:hover {
+    color: white !important;
+    background: maroon !important;
+    border: maroon solid 1px !important;
+}
+.header-imageContainer {
+    background-color: #5388dd;
+}
+.header-upload-imageContainer {
+    background-color: #5388dd;
+    height: 56px;
+}
+.dea-imageView-header {
+    padding: 0px 15px;
+}
+.dea-page {
+    display: flex;
+}
+.dea-imageView-page {
+    margin: auto;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.dea-imageView-page2 {
+    margin: auto;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.dea-jumpingPage {
+    height: 24px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    color: black !important;
+    font-weight: bold !important;
+}
+.dea-link-header {
+    background: none !important;
+    padding-left: 0px !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    font-size: 10px !important;
+}
+.dea-link-headerWarning {
+    padding: 12px;
+    font-size: 14px;
+}
+.dea-imageView-file {
+    float: left;
+    list-style-type: none;
+    padding-top: 7px;
+    padding-left: 10px !important;
+    margin-bottom: 5px !important;
+}
+.dea-imageView-fileName {
+    color: white;
+    font-size: 20px;
+}
+.dea-imageView-fileVersion {
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.dea-label {
+    color: #6d6d6d;
+    font-size: 12px;
+}
+.dea-valueLabel {
+    color: black !important;
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+    font-weight: bold !important;
+    padding-right: 5px !important;
+}
+.dea-view.dea-formInput input:read-only {
+    background: white;
+    border: 1px solid #dadada !important;
+    color: #dadada !important;
+}
+.dea-view.dea-formInput input:read-only ~ label {
+    color: #dadada !important;
+}
+
+/* STATUS DOCUMENT/REVISION */
+.dea-cursorPointer {
+    cursor: pointer;
+}
+.dea-revisionFont {
+    color: #d0021b;
+}
+.dea-filterBtn {
+    background-color: #eeeeee !important;
+    color: black !important;
+    border: 2px solid #eeeeee !important;
+    border-radius: 50px !important;
+}
+.dea-filterBtn:hover {
+    background-color: #005cab !important;
+    color: white !important;
+    border: 2px solid #005cab !important;
+}
+.dea-activedBtn {
+    background-color: #005cab !important;
+    color: white !important;
+    border: 2px solid #005cab !important;
+}
+.dea-activedBtn2 {
+    background-color: #6d6d6d !important;
+    color: white !important;
+    border: 2px solid #6d6d6d !important;
+}
+
+/* USER Management */
+.dea-appContent {
+    position: fixed;
+    width: 100%;
+}
+.dea-blueSearch {
+    background: #005cab !important;
+    color: white !important;
+    border: #005cab 2px solid !important;
+    border-radius: 0px 4px 4px 0px !important;
+}
+.dea-blueSearch:focus {
+    outline: none;
+}
+.dea-formBoxUser {
+    text-align: center;
+    /* top: 50%; */
+    margin-top: 5%;
+}
+.dea-keywordSearchUser {
+    /* width: 300px !important; */
+    /* padding: 15px !important; */
+    border: 1px solid black !important;
+    border-right-color: #005cab !important;
+}
+.dea-pl {
+    padding-left: 250px !important;
+}
+.dea-pr {
+    padding-right: 200px !important;
+}
+form.submitted .ng-invalid {
+    border: 1px solid #f00;
+}
+.dea-userID {
+    background-color: #fafafa;
+    margin: 10px 2px !important;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+.dea-dataUser {
+    font-weight: bolder;
+}
+.dea-tooltipUser {
+    display: none;
+}
+.dea-empty .ng-invalid ~ .dea-tooltipUser {
+    display: initial;
+}
+.dea-tooltipUser-Text {
+    width: 200px;
+    background-color: #d50000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 5;
+    top: -5px;
+    left: 105%;
+    font-size: 12px;
+}
+.dea-tooltipUser-Text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #d50000 transparent transparent;
+}
+input.has-error {
+    border: 2px solid #d50000 !important;
+}
+input.has-error::placeholder {
+    color: #d50000;
+}
+input.has-error:focus::placeholder {
+    color: initial;
+}
+.dea-btnDelete {
+    width: 128px;
+    height: 38px;
+    font-size: 14px !important;
+    border: maroon solid 1px !important;
+    background: maroon !important;
+    color: white !important;
+    border-radius: 8px !important;
+    letter-spacing: 1.25px;
+}
+
+/* DEA LOGIN */
+@media (max-height: 900px) {
+    .dea-logoSide {
+        background: linear-gradient(-49deg, #00579f 50%, #0061ae 50%);
+    }
+}
+@media (min-height: 901px) {
+    .dea-logoSide {
+        background: linear-gradient(-60deg, #00579f 50%, #0061ae 50%);
+    }
+}
+
+@media (min-height: 769px) {
+    .dea-table th {
+        font-size: 12px;
+        padding: 16px 30px !important;
+    }
+    .dea-tableSorting th {
+        font-size: 12px;
+        padding: 16px 30px 8px 30px !important;
+    }
+    .dea-table td,
+    .dea-tableSorting td {
+        font-size: 14px;
+        padding: 12px 30px !important;
+    }
+    .dea-otherDoc {
+        margin-top: 24px;
+    }
+    .dea-pagination {
+        margin-top: 24px;
+    }
+    .dea-actionHeader {
+        /* margin-top: 30px !important; */
+        margin-bottom: 20px;
+    }
+    .dea-filterRow {
+        margin-top: 8px;
+    }
+}
