@@ -1,5 +1,6 @@
 version: '3'
 services:
+  # Admin Service
   admin-service:
     image: admin-service
     build: 
@@ -7,6 +8,8 @@ services:
       dockerfile: Dockerfile.admin-service
     ports:
       - "7070:7070"
+      
+  # FP Service
   fp-service:
     image: fp-service
     build: 
@@ -14,6 +17,8 @@ services:
       dockerfile: Dockerfile.fp-service
     ports:
       - "7071:7071"
+
+  # Frontend
   frontend:
     image: frontend
     build: 
