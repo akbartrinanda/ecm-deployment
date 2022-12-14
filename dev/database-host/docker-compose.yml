@@ -14,7 +14,7 @@ services:
   postgres:
     image: postgres
     ports:
-     - "5432:5432"
+     - "54321:5432"
     environment:
       POSTGRES_USER: bpkb
       POSTGRES_PASSWORD: P@ssw0rd!

@@ -6,10 +6,10 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.admin-service
-    ports:
-      - "7070:7070"
     expose:
       - "7070"
+    ports:
+      - "7070:7070"
       
   # FP Service
   fp-service:
@@ -17,12 +17,12 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.fp-service
+    expose:
+      - "7071"
     ports:
       - "7071:7071"
     volumes:
-      - /d/documents/btu/bpkb/uploads:/uploads
-    expose:
-      - "7071"
+      - /root/bpkb/uploads:/uploads
 
   # Frontend
   frontend:
@@ -30,7 +30,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.frontend
-    ports:
-      - "8888:80"
     expose:
       - "80"
+    ports:
+      - "8888:80"
