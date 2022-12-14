@@ -1,6 +1,7 @@
 version: '3'
 services:
   solr:
+    image: solr
     build: 
       context: .
       dockerfile: Dockerfile.solr

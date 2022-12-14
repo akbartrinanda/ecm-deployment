@@ -8,6 +8,8 @@ services:
       dockerfile: Dockerfile.admin-service
     ports:
       - "7070:7070"
+    expose:
+      - "7070"
       
   # FP Service
   fp-service:
@@ -17,6 +19,10 @@ services:
       dockerfile: Dockerfile.fp-service
     ports:
       - "7071:7071"
+    volumes:
+      - /d/documents/btu/bpkb/uploads:/uploads
+    expose:
+      - "7071"
 
   # Frontend
   frontend:
@@ -26,3 +32,5 @@ services:
       dockerfile: Dockerfile.frontend
     ports:
       - "8888:80"
+    expose:
+      - "80"

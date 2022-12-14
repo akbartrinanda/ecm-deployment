@@ -1,15 +1,8 @@
-# Build release image
-FROM openjdk:12-alpine
+FROM openjdk:8-alpine
 
-#Copy result
-WORKDIR /executables
+RUN apk add --no-cache fontconfig ttf-dejavu
+
+WORKDIR /app
 COPY fp-service.jar .
 
-#Add user and group for running as unprivileged user
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-USER appuser
-
-#Define how to start
 ENTRYPOINT ["java", "-jar", "fp-service.jar"]
-
-EXPOSE 7071

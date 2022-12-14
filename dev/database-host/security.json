@@ -7,5 +7,17 @@
         },
         "realm": "My Solr users",
         "forwardCredentials": false
+    },
+    "authorization": {
+        "class": "solr.RuleBasedAuthorizationPlugin",
+        "permissions": [
+            {
+                "name": "security-edit",
+                "role": "admin"
+            }
+        ],
+        "user-role": {
+            "solr": "admin"
+        }
     }
 }

@@ -1,15 +1,6 @@
-# Build release image
-FROM openjdk:12-alpine
+FROM openjdk:8-alpine
 
-#Copy result
-WORKDIR /executables
+WORKDIR /app
 COPY admin-service.jar .
 
-#Add user and group for running as unprivileged user
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-USER appuser
-
-#Define how to start
 ENTRYPOINT ["java", "-jar", "admin-service.jar"]
-
-EXPOSE 7070
