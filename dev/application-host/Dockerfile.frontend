@@ -1,7 +1,5 @@
 FROM nginx:alpine
 
 WORKDIR /executables
-COPY dist.zip .
-RUN tar -xvf dist.zip
-
-COPY /dist/ /usr/share/nginx/html
+COPY frontend.tar.gz .
+RUN tar -xf frontend.tar.gz -C /usr/share/nginx/html/
