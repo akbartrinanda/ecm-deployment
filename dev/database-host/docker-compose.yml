@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile.solr
     ports:
      - "8983:8983"
+    restart: always
     volumes:
       - solr-data:/var/solr
     command: >
@@ -15,6 +16,7 @@ services:
     image: postgres
     ports:
      - "54321:5432"
+    restart: always
     environment:
       POSTGRES_USER: bpkb
       POSTGRES_PASSWORD: P@ssw0rd!

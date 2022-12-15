@@ -6,6 +6,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.admin-service
+    restart: always
     expose:
       - "7070"
     ports:
@@ -17,6 +18,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.fp-service
+    restart: always
     expose:
       - "7071"
     ports:
@@ -30,6 +32,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.frontend
+    restart: always
     expose:
       - "80"
     ports:
