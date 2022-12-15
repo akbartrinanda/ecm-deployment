@@ -1,5 +1,6 @@
 FROM nginx:alpine
 
 WORKDIR /executables
-COPY dist .
-COPY /dist/ /usr/share/nginx/html
+COPY dist.zip .
+# unzip
+RUN unzip dist.zip -d /usr/share/nginx/html
