@@ -3,9 +3,9 @@ if grep -Fqe "Already up-to-date." << EOF
 `cd /root/bpkb/jar && git pull`
 EOF
 then
-    echo "No update"
+    echo "`date`: No update docker"
 else
-    echo "Newest exist, recompose!"
+    echo "`date`: Newest exist, recompose!"
     cd /root/bpkb/jar/dev/application-host
     docker-compose down
     docker-compose up -d --build
