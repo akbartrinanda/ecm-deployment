@@ -26,6 +26,18 @@ services:
     volumes:
       - /root/bpkb/uploads:/uploads
 
+  # Scheduler Service
+  scheduler-service:
+    image: scheduler-service
+    build: 
+      context: .
+      dockerfile: Dockerfile.scheduler-service
+    restart: always
+    expose:
+      - "7072"
+    ports:
+      - "7072:7072"
+
   # Frontend
   frontend:
     image: frontend
