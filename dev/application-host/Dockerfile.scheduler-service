@@ -1,6 +1,6 @@
 FROM openjdk:8-alpine
 
 WORKDIR /app
-COPY scheduler-service.jar .
+COPY ./apps/scheduler-service.jar .
 
 ENTRYPOINT ["java", "-jar", "scheduler-service.jar"]

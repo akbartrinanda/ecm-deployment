@@ -1,6 +1,6 @@
 FROM openjdk:8-alpine
 
 WORKDIR /app
-COPY admin-service.jar .
+COPY ./apps/admin-service.jar .
 
 ENTRYPOINT ["java", "-jar", "admin-service.jar"]

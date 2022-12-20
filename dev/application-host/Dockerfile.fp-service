@@ -3,6 +3,6 @@ FROM openjdk:8-alpine
 RUN apk add --no-cache fontconfig ttf-dejavu
 
 WORKDIR /app
-COPY fp-service.jar .
+COPY ./apps/fp-service.jar .
 
 ENTRYPOINT ["java", "-jar", "fp-service.jar"]
