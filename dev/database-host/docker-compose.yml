@@ -2,6 +2,7 @@ version: '3'
 services:
   solr1:
     image: solr
+    container_name: solr-polda
     build: 
       context: .
       dockerfile: Dockerfile.solr
@@ -11,9 +12,10 @@ services:
     volumes:
       - solr-data:/var/solr
     command: >
-      sh -c "precreate-core document; exec solr -f"
+      sh -c "precreate-core document; cp managed-schema.xml /var/solr/data/document/conf/managed-schema.xml; exec solr -f"
   solr2:
     image: solr
+    container_name: solr-polri
     build: 
       context: .
       dockerfile: Dockerfile.solr
@@ -23,9 +25,10 @@ services:
     volumes:
       - solr2-data:/var/solr
     command: >
-      sh -c "precreate-core document; exec solr -f"
+      sh -c "precreate-core document; cp managed-schema.xml /var/solr/data/document/conf/managed-schema.xml; exec solr -f"
   postgres:
     image: postgres
+    container_name: postgres
     ports:
      - "54321:5432"
     restart: always
