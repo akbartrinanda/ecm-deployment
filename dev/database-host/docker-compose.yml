@@ -1,6 +1,6 @@
 version: '3'
 services:
-  solr:
+  solr1:
     image: solr
     build: 
       context: .
@@ -10,6 +10,18 @@ services:
     restart: always
     volumes:
       - solr-data:/var/solr
+    command: >
+      sh -c "precreate-core document; exec solr -f"
+  solr2:
+    image: solr
+    build: 
+      context: .
+      dockerfile: Dockerfile.solr
+    ports:
+     - "9999:8983"
+    restart: always
+    volumes:
+      - solr2-data:/var/solr
     command: >
       sh -c "precreate-core document; exec solr -f"
   postgres:
@@ -24,4 +36,5 @@ services:
       - postgres-data:/var/lib/postgresql/data
 volumes:
   solr-data: 
+  solr2-data: 
   postgres-data:
