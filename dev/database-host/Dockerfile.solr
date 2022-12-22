@@ -4,6 +4,4 @@ ENV SOLR_USER="solr" \
 USER root
 COPY --chown=solr:solr ./config/security.json /var/solr/data/security.json
 COPY --chown=solr:solr ./config/managed-schema.xml .
-COPY --chown=solr:solr ./certs /var/solr/certs
-# COPY --chown=solr:solr ./config/solr.in.sh /etc/default/solr.in.sh
 USER $SOLR_USER

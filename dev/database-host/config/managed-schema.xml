@@ -453,8 +453,10 @@
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
 
   <field name="createdBy" type="text_general" uninvertible="true" indexed="true" stored="true"/>
+  <field name="createdByName" type="text_general" uninvertible="true" indexed="true" stored="true"/>
   <field name="createdAt" type="pdate" uninvertible="true" indexed="true" stored="true"/>
   <field name="updatedBy" type="text_general" uninvertible="true" indexed="true" stored="true"/>
+  <field name="updatedByName" type="text_general" uninvertible="true" indexed="true" stored="true"/>
   <field name="updatedAt" type="pdate" uninvertible="true" indexed="true" stored="true"/>
   <field name="documentType" type="text_general" uninvertible="true" indexed="true" stored="true"/>
   <field name="pekerjaan" type="text_general" uninvertible="true" indexed="true" stored="true"/>
@@ -524,6 +526,83 @@
   <field name="branchPoldaId" type="text_general" uninvertible="true" indexed="true" stored="true"/>
   <field name="branchPolresName" type="text_general" uninvertible="true" indexed="true" stored="true"/>
   <field name="branchPoldaName" type="text_general" uninvertible="true" indexed="true" stored="true"/>
+
+  <field name="all" type="text_general" multiValued="true" indexed="true" stored="false"/>
+
+  <copyField source="createdBy" dest="all" maxChars="256"/>
+  <copyField source="createdByName" dest="all" maxChars="256"/>
+  <copyField source="createdAt" dest="all" maxChars="256"/>
+  <copyField source="updatedBy" dest="all" maxChars="256"/>
+  <copyField source="updatedByName" dest="all" maxChars="256"/>
+  <copyField source="updatedAt" dest="all" maxChars="256"/>
+  <copyField source="documentType" dest="all" maxChars="256"/>
+  <copyField source="pekerjaan" dest="all" maxChars="256"/>
+  <copyField source="nomorDokumen" dest="all" maxChars="256"/>
+  <copyField source="nomorFaktur" dest="all" maxChars="256"/>
+  <copyField source="tanggalFaktur" dest="all" maxChars="256"/>
+  <copyField source="nama" dest="all" maxChars="256"/>
+  <copyField source="alamat" dest="all" maxChars="256"/>
+  <copyField source="identitasPemilik" dest="all" maxChars="256"/>
+  <copyField source="merk" dest="all" maxChars="256"/>
+  <copyField source="type" dest="all" maxChars="256"/>
+  <copyField source="jenis" dest="all" maxChars="256"/>
+  <copyField source="model" dest="all" maxChars="256"/>
+  <copyField source="tahunPembuatan" dest="all" maxChars="256"/>
+  <copyField source="isiSilinder" dest="all" maxChars="256"/>
+  <copyField source="warna" dest="all" maxChars="256"/>
+  <copyField source="nomorRangka" dest="all" maxChars="256"/>
+  <copyField source="nomorMesin" dest="all" maxChars="256"/>
+  <copyField source="bahanBakar" dest="all" maxChars="256"/>
+  <copyField source="provinsi" dest="all" maxChars="256"/>
+  <copyField source="kota" dest="all" maxChars="256"/>
+  <copyField source="kecamatan" dest="all" maxChars="256"/>
+  <copyField source="kelurahan" dest="all" maxChars="256"/>
+  <copyField source="rtRw" dest="all" maxChars="256"/>
+  <copyField source="nik" dest="all" maxChars="256"/>
+  <copyField source="tempatLahir" dest="all" maxChars="256"/>
+  <copyField source="tanggalLahir" dest="all" maxChars="256"/>
+  <copyField source="jenisKelamin" dest="all" maxChars="256"/>
+  <copyField source="golonganDarah" dest="all" maxChars="256"/>
+  <copyField source="agama" dest="all" maxChars="256"/>
+  <copyField source="statusPerkawinan" dest="all" maxChars="256"/>
+  <copyField source="kewarganegaraan" dest="all" maxChars="256"/>
+  <copyField source="berlakuHingga" dest="all" maxChars="256"/>
+  <copyField source="nomorPolisi" dest="all" maxChars="256"/>
+  <copyField source="tipe" dest="all" maxChars="256"/>
+  <copyField source="warnaTnkb" dest="all" maxChars="256"/>
+  <copyField source="tahunRegistrasi" dest="all" maxChars="256"/>
+  <copyField source="nomorBpkb" dest="all" maxChars="256"/>
+  <copyField source="kodeLokasi" dest="all" maxChars="256"/>
+  <copyField source="nomorUrutPendaftaran" dest="all" maxChars="256"/>
+  <copyField source="berlakuSampai" dest="all" maxChars="256"/>
+  <copyField source="nomorKtpTdp" dest="all" maxChars="256"/>
+  <copyField source="email" dest="all" maxChars="256"/>
+  <copyField source="dikeluarkanDi" dest="all" maxChars="256"/>
+  <copyField source="tanggal" dest="all" maxChars="256"/>
+  <copyField source="nomorRegistrasi" dest="all" maxChars="256"/>
+  <copyField source="merek" dest="all" maxChars="256"/>
+  <copyField source="nomorRangkaNikVin" dest="all" maxChars="256"/>
+  <copyField source="jumlahSumbu" dest="all" maxChars="256"/>
+  <copyField source="jumlahRoda" dest="all" maxChars="256"/>
+  <copyField source="namaApmImportir" dest="all" maxChars="256"/>
+  <copyField source="nomorPib" dest="all" maxChars="256"/>
+  <copyField source="nomorSutSrut" dest="all" maxChars="256"/>
+  <copyField source="nomorTpt" dest="all" maxChars="256"/>
+  <copyField source="noFormABC" dest="all" maxChars="256"/>
+  <copyField source="lainLain" dest="all" maxChars="256"/>
+  <copyField source="harga" dest="all" maxChars="256"/>
+  <copyField source="formulirAB" dest="all" maxChars="256"/>
+  <copyField source="pib" dest="all" maxChars="256"/>
+  <copyField source="tpt" dest="all" maxChars="256"/>
+  <copyField source="sut" dest="all" maxChars="256"/>
+  <copyField source="srut" dest="all" maxChars="256"/>
+  <copyField source="fileName" dest="all" maxChars="256"/>
+  <copyField source="extension" dest="all" maxChars="256"/>
+  <copyField source="bundleId" dest="all" maxChars="256"/>
+  <copyField source="branchPolresId" dest="all" maxChars="256"/>
+  <copyField source="branchPoldaId" dest="all" maxChars="256"/>
+  <copyField source="branchPolresName" dest="all" maxChars="256"/>
+  <copyField source="branchPoldaName" dest="all" maxChars="256"/>
 
 
   <dynamicField name="*_txt_en_split_tight" type="text_en_splitting_tight" indexed="true" stored="true"/>
