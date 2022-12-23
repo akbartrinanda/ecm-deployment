@@ -501,7 +501,7 @@
   <field name="nomorKtpTdp" type="text_general" uninvertible="true" indexed="true" stored="true"/>
   <field name="email" type="text_general" uninvertible="true" indexed="true" stored="true"/>
   <field name="dikeluarkanDi" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="tanggal" type="text_general" uninvertible="true" indexed="true" stored="true"/>
+  <field name="tanggal" type="pdate" uninvertible="true" indexed="true" stored="true"/>
   <field name="nomorRegistrasi" type="text_general" uninvertible="true" indexed="true" stored="true"/>
   <field name="merek" type="text_general" uninvertible="true" indexed="true" stored="true"/>
   <field name="nomorRangkaNikVin" type="text_general" uninvertible="true" indexed="true" stored="true"/>
