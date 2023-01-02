@@ -1,73 +1,53 @@
 version: '3'
 services:
   # Admin Service
-  # admin-service:
-  #   image: admin-service
-  #   build: 
-  #     context: .
-  #     dockerfile: Dockerfile.admin-service
-  #   restart: always
-  #   expose:
-  #     - "7070"
-  #   ports:
-  #     - "7070:7070"
-      
-  # # FP Service
-  # fp-service:
-  #   image: fp-service
-  #   build: 
-  #     context: .
-  #     dockerfile: Dockerfile.fp-service
-  #   restart: always
-  #   expose:
-  #     - "7071"
-  #   ports:
-  #     - "7071:7071"
-  #   volumes:
-  #     - /root/bpkb/uploads:/uploads
-
-  # # Scheduler Service
-  # scheduler-service:
-  #   image: scheduler-service
-  #   build: 
-  #     context: .
-  #     dockerfile: Dockerfile.scheduler-service
-  #   restart: always
-  #   expose:
-  #     - "7072"
-  #   ports:
-  #     - "7072:7072"
-
-  # # Frontend
-  # frontend:
-  #   image: frontend
-  #   build: 
-  #     context: .
-  #     dockerfile: Dockerfile.frontend
-  #   restart: always
-  #   expose:
-  #     - "80"
-  #     - "443"
-  #   ports:
-  #     - "8888:80"
-  #     - "8443:443"
-  jenkins:
-    build: .
-    privileged: true
-    user: root
-    restart: on-failure:10
+  admin-service:
+    image: admin-service
+    build: 
+      context: .
+      dockerfile: Dockerfile.admin-service
+    restart: always
+    expose:
+      - "7070"
     ports:
-      - 8080:8080
-    container_name: mjovanc-jenkins
+      - "7070:7070"
+      
+  # FP Service
+  fp-service:
+    image: fp-service
+    build: 
+      context: .
+      dockerfile: Dockerfile.fp-service
+    restart: always
+    expose:
+      - "7071"
+    ports:
+      - "7071:7071"
     volumes:
-      - ./:/jcasc
-      - ~/apps/jenkins:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      - CASC_JENKINS_CONFIG=./config/jenkins.yml
-      - JENKINS_OPTS='--prefix=/'
-    logging:
-      driver: 'json-file'
-      options:
-        max-file: '3'
-        max-size: '10m'
+      - /root/bpkb/uploads:/uploads
+
+  # Scheduler Service
+  scheduler-service:
+    image: scheduler-service
+    build: 
+      context: .
+      dockerfile: Dockerfile.scheduler-service
+    restart: always
+    expose:
+      - "7072"
+    ports:
+      - "7072:7072"
+
+  # Frontend
+  frontend:
+    image: frontend
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend
+    restart: always
+    expose:
+      - "80"
+      - "443"
+    ports:
+      - "8888:80"
+      - "8443:443"
