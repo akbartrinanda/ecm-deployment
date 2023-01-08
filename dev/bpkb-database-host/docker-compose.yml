@@ -49,7 +49,7 @@ services:
     volumes:
       - postgres-data-polri:/var/lib/postgresql/data
 volumes:
-  -polda-polda: 
+  solr-data-polda: 
   solr-data-polri: 
   postgres-data-polda:
   postgres-data-polri:
