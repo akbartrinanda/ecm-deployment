@@ -9,7 +9,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose 
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose 
 sudo docker-compose --version 
-git clone https://github.com/akbartrinanda/bpkb-deployment.git
 mkdir uploads-polda
 mkdir uploads-polri
 cd ~/bpkb-deployment/dev/database-host && docker-compose down && docker-compose up -d --build
