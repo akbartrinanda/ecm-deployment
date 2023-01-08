@@ -20,10 +20,10 @@ echo -e "\e[1;32msudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compos
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose 
 echo -e "\e[1;32msudo docker-compose --version \e[0m"
 sudo docker-compose --version 
-echo -e "\e[1;32mmkdir uploads-polda\e[0m"
-mkdir uploads-polda
-echo -e "\e[1;32mmkdir uploads-polri\e[0m"
-mkdir uploads-polri
+echo -e "\e[1;32mmkdir ~/uploads-polda\e[0m"
+mkdir ~/uploads-polda
+echo -e "\e[1;32mmkdir ~/uploads-polri\e[0m"
+mkdir ~/uploads-polri
 echo -e "\e[1;32mcd ~/bpkb-deployment/dev/bpkb-database-host && docker-compose down && docker-compose up -d --build\e[0m"
 cd ~/bpkb-deployment/dev/bpkb-database-host && docker-compose down && docker-compose up -d --build
 echo -e "\e[1;32mcd ~/bpkb-deployment/dev/bpkb-application-host && docker-compose down && docker-compose up -d --build\e[0m"
