@@ -1,34 +1,34 @@
 version: '3'
 services:
-  solr1:
+  solr-polda:
     image: solr
     container_name: solr-polda
     build: 
       context: .
       dockerfile: Dockerfile.solr
     ports:
-     - "8983:8983"
+     - "8981:8983"
     restart: always
     volumes:
-      - solr-data:/var/solr
+      - solr-data-polda:/var/solr
     command: >
       sh -c "precreate-core document; cp managed-schema.xml /var/solr/data/document/conf/managed-schema; exec solr -f"
-  solr2:
+  solr-polri:
     image: solr
     container_name: solr-polri
     build: 
       context: .
       dockerfile: Dockerfile.solr
     ports:
-     - "9999:8983"
+     - "8980:8983"
     restart: always
     volumes:
-      - solr2-data:/var/solr
+      - solr-data-polri:/var/solr
     command: >
       sh -c "precreate-core document; cp managed-schema.xml /var/solr/data/document/conf/managed-schema; exec solr -f"
-  postgres:
+  postgres-polda:
     image: postgres
-    container_name: postgres
+    container_name: postgres-polda
     ports:
      - "54321:5432"
     restart: always
@@ -36,8 +36,20 @@ services:
       POSTGRES_USER: bpkb
       POSTGRES_PASSWORD: P@ssw0rd!
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - postgres-data-polda:/var/lib/postgresql/data
+  postgres-polri:
+    image: postgres
+    container_name: postgres-polri
+    ports:
+     - "54320:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: bpkb
+      POSTGRES_PASSWORD: P@ssw0rd!
+    volumes:
+      - postgres-data-polri:/var/lib/postgresql/data
 volumes:
-  solr-data: 
-  solr2-data: 
-  postgres-data:
+  -polda-polda: 
+  solr-data-polri: 
+  postgres-data-polda:
+  postgres-data-polri:

@@ -1,8 +1,7 @@
 version: '3'
 services:
-  # Admin Service
-  admin-service:
-    image: admin-service
+  admin-service-polda:
+    image: admin-service-polda
     build: 
       context: .
       dockerfile: Dockerfile.admin-service
@@ -11,10 +10,8 @@ services:
       - "7070"
     ports:
       - "7070:7070"
-      
-  # FP Service
-  fp-service:
-    image: fp-service
+  fp-service-polda:
+    image: fp-service-polda
     build: 
       context: .
       dockerfile: Dockerfile.fp-service
@@ -24,11 +21,9 @@ services:
     ports:
       - "7071:7071"
     volumes:
-      - /root/bpkb/uploads:/uploads
-
-  # Scheduler Service
-  scheduler-service:
-    image: scheduler-service
+      - ~/uploads-polda:/uploads
+  scheduler-service-polda:
+    image: scheduler-service-polda
     build: 
       context: .
       dockerfile: Dockerfile.scheduler-service
@@ -37,10 +32,8 @@ services:
       - "7072"
     ports:
       - "7072:7072"
-
-  # Frontend
-  frontend:
-    image: frontend
+  frontend-polda:
+    image: frontend-polda
     build: 
       context: .
       dockerfile: Dockerfile.frontend
@@ -49,5 +42,5 @@ services:
       - "80"
       - "443"
     ports:
-      - "8888:80"
-      - "8443:443"
+      - "7080:80"
+      - "70443:443"
