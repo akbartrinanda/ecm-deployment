@@ -25,6 +25,7 @@ mkdir ~/uploads-polda
 echo -e "\e[1;32mmkdir ~/uploads-polri\e[0m"
 mkdir ~/uploads-polri
 echo -e "\e[1;32mcd ~/bpkb-deployment/dev/bpkb-database-host && docker-compose down && docker-compose up -d --build\e[0m"
-cd ~/bpkb-deployment/dev/bpkb-database-host && docker-compose down && docker-compose up -d --build
+cd ~/bpkb-deployment/dev/bpkb-database-host && sudo docker-compose down && sudo docker-compose up -d --build
 echo -e "\e[1;32mcd ~/bpkb-deployment/dev/bpkb-application-host && docker-compose down && docker-compose up -d --build\e[0m"
-cd ~/bpkb-deployment/dev/bpkb-application-host && docker-compose down && docker-compose up -d --build
+cd ~/bpkb-deployment/dev/bpkb-application-host && sudo docker-compose down && sudo docker-compose up -d --build
+cd ~
