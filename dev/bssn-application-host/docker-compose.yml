@@ -1,0 +1,36 @@
+version: '3'
+services:
+  admin-service-bssn:
+    image: admin-service-bssn
+    build: 
+      context: .
+      dockerfile: Dockerfile.admin-service
+    restart: always
+    expose:
+      - "7070"
+    ports:
+      - "5050:7070"
+  fp-service-bssn:
+    image: fp-service-bssn
+    build: 
+      context: .
+      dockerfile: Dockerfile.fp-service
+    restart: always
+    expose:
+      - "7071"
+    ports:
+      - "5051:7071"
+    volumes:
+      - ~/uploads-bssn:/uploads
+  frontend-bssn:
+    image: frontend-bssn
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend
+    restart: always
+    expose:
+      - "80"
+      - "443"
+    ports:
+      - "5080:80"
+      - "5443:443"

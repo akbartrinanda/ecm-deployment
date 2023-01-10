@@ -1,0 +1,29 @@
+version: '3'
+services:
+  solr-bssn:
+    image: solr
+    container_name: solr-bssn
+    build: 
+      context: .
+      dockerfile: Dockerfile.solr
+    ports:
+     - "7983:8983"
+    restart: always
+    volumes:
+      - solr-data-bssn:/var/solr
+    command: >
+      sh -c "precreate-core document; exec solr -f"
+  postgres-bssn:
+    image: postgres
+    container_name: postgres-bssn
+    ports:
+     - "54329:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: bssn
+      POSTGRES_PASSWORD: P@ssw0rd!
+    volumes:
+      - postgres-data-bssn:/var/lib/postgresql/data
+volumes:
+  solr-data-bssn: 
+  postgres-data-bssn:

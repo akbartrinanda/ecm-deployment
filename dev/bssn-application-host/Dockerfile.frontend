@@ -1,0 +1,9 @@
+FROM nginx:alpine
+
+WORKDIR /executables
+COPY ./apps/frontend.tar.gz .
+RUN tar -xf frontend.tar.gz -C /usr/share/nginx/html/
+RUN mkdir -p /etc/nginx/html
+RUN tar -xf frontend.tar.gz -C /etc/nginx/html/
+COPY ./config/nginx.conf /etc/nginx/conf.d/nginx.conf
+COPY ./certs /etc/nginx/certs
