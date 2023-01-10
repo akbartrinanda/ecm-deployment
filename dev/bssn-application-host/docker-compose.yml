@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile.admin-service
     restart: always
     expose:
-      - "7070"
+      - "5050"
     ports:
-      - "5050:7070"
+      - "5050:5050"
   fp-service-bssn:
     image: fp-service-bssn
     build: 
@@ -17,9 +17,9 @@ services:
       dockerfile: Dockerfile.fp-service
     restart: always
     expose:
-      - "7071"
+      - "5051"
     ports:
-      - "5051:7071"
+      - "5051:5051"
     volumes:
       - ~/uploads-bssn:/uploads
   frontend-bssn:
