@@ -21,7 +21,7 @@ services:
     ports:
       - "5051:5051"
     volumes:
-      - ~/uploads-bssn:/uploads
+      - /home/user/uploads-bssn:/uploads
   frontend-bssn:
     image: frontend-bssn
     build: 
