@@ -12,7 +12,7 @@ services:
     volumes:
       - solr-data-bssn:/var/solr
     command: >
-      sh -c "precreate-core document; exec solr -f"
+      sh -c "precreate-core document; cp managed-schema.xml /var/solr/data/document/conf/managed-schema; exec solr -f"
   postgres-bssn:
     image: postgres
     container_name: postgres-bssn
