@@ -34,3 +34,15 @@ services:
     ports:
       - "5080:80"
       - "5443:443"
+  frontend-v2-bssn:
+    image: frontend-v2-bssn
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend-v2
+    restart: always
+    expose:
+      - "80"
+      - "443"
+    ports:
+      - "6080:80"
+      - "6443:443"
