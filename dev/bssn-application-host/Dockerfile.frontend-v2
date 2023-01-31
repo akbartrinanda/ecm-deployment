@@ -1,5 +1,8 @@
 FROM nginx:alpine
 
+RUN apk add --no-cache tzdata
+ENV TZ Asia/Jakarta
+
 WORKDIR /executables
 COPY ./apps/frontend-v2.tar.gz .
 RUN tar -xf frontend-v2.tar.gz -C /usr/share/nginx/html/
