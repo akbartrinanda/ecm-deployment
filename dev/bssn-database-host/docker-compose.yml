@@ -9,6 +9,8 @@ services:
     ports:
      - "7983:8983"
     restart: always
+    environment:
+      TZ: Asia/Jakarta
     volumes:
       - solr-data-bssn:/var/solr
     command: >
@@ -22,6 +24,7 @@ services:
     environment:
       POSTGRES_USER: bssn
       POSTGRES_PASSWORD: P@ssw0rd!
+      TZ: Asia/Jakarta
     volumes:
       - postgres-data-bssn:/var/lib/postgresql/data
 volumes:
