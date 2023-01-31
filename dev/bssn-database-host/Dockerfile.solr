@@ -1,8 +1,5 @@
 FROM solr:8.3
 
-RUN apk add --no-cache tzdata
-ENV TZ Asia/Jakarta
-
 ENV SOLR_USER="solr" \
     SOLR_GROUP="solr"
 USER root
