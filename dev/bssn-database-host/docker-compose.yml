@@ -34,7 +34,8 @@ services:
      - "6379:6379"
     restart: always
     environment:
-      - REDIS_PASSWORD=P@ssw0rd!
+      - ALLOW_EMPTY_PASSWORD=yes
+      # - REDIS_PASSWORD=P@ssw0rd!
       - TZ=Asia/Jakarta
     volumes:
       - redis-data-bssn:/data
