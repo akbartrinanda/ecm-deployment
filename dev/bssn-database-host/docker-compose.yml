@@ -27,6 +27,18 @@ services:
       TZ: Asia/Jakarta
     volumes:
       - postgres-data-bssn:/var/lib/postgresql/data
+  redis-bssn:
+    image: bitnami/redis:latest
+    container_name: redis-bssn
+    ports:
+     - "6379:6379"
+    restart: always
+    environment:
+      - REDIS_PASSWORD=P@ssw0rd!
+      - TZ=Asia/Jakarta
+    volumes:
+      - redis-data-bssn:/data
 volumes:
   solr-data-bssn: 
   postgres-data-bssn:
+  redis-data-bssn:
