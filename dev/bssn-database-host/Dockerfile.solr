@@ -1,4 +1,4 @@
-FROM solr:8.3
+FROM solr:8.11.2
 
 ENV SOLR_USER="solr" \
     SOLR_GROUP="solr"
