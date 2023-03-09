@@ -452,85 +452,12 @@
   <field name="_version_" type="plong" indexed="false" stored="false"/>
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
 
-  <field name="createdBy" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="createdByName" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="createdAt" type="pdate" uninvertible="true" indexed="true" stored="true"/>
-  <field name="updatedBy" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="updatedByName" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="updatedAt" type="pdate" uninvertible="true" indexed="true" stored="true"/>
-  <field name="documentType" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="pekerjaan" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorDokumen" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorFaktur" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="tanggalFaktur" type="pdate" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nama" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="alamat" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="identitasPemilik" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="merk" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="type" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="jenis" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="model" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="tahunPembuatan" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="isiSilinder" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="warna" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorRangka" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorMesin" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="bahanBakar" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="provinsi" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="kota" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="kecamatan" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="kelurahan" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="rtRw" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nik" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="tempatLahir" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="tanggalLahir" type="pdate" uninvertible="true" indexed="true" stored="true"/>
-  <field name="jenisKelamin" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="golonganDarah" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="agama" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="statusPerkawinan" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="kewarganegaraan" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="berlakuHingga" type="pdate" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorPolisi" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="tipe" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="warnaTnkb" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="tahunRegistrasi" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorBpkb" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="kodeLokasi" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorUrutPendaftaran" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="berlakuSampai" type="pdate" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorKtpTdp" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="email" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="dikeluarkanDi" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="tanggal" type="pdate" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorRegistrasi" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="merek" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorRangkaNikVin" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="jumlahSumbu" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="jumlahRoda" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="namaApmImportir" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorPib" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorSutSrut" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="nomorTpt" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="noFormABC" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="lainLain" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="harga" type="plongs" uninvertible="true" indexed="true" stored="true"/>
-  <field name="formulirAB" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="pib" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="tpt" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="sut" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="srut" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="fileName" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="extension" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="bundleId" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="branchPolresId" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="branchPoldaId" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="branchPolresName" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-  <field name="branchPoldaName" type="text_general" uninvertible="true" indexed="true" stored="true"/>
-
   <field name="all" type="text_general" multiValued="true" indexed="true" stored="false"/>
   <copyField source="*_t" dest="all" maxChars="256"/>
   <copyField source="*_l" dest="all" maxChars="256"/>
   <copyField source="*_dt" dest="all" maxChars="256"/>
+  <copyField source="*_i" dest="all" maxChars="256"/>
+  <copyField source="*_ss" dest="all" maxChars="256"/>
 
   <dynamicField name="*_txt_en_split_tight" type="text_en_splitting_tight" indexed="true" stored="true"/>
   <dynamicField name="*_descendent_path" type="descendent_path" indexed="true" stored="true"/>
