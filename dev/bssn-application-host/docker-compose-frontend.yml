@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend-bssn:
+    image: frontend-bssn
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend
+    restart: always
+    expose:
+      - "80"
+      - "443"
+    ports:
+      - "6080:80"
+      - "6443:443"
