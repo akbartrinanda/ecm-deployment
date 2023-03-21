@@ -1,0 +1,12 @@
+version: '3'
+services:
+  admin-service-bssn:
+    image: admin-service-bssn
+    build:
+      context: .
+      dockerfile: Dockerfile.admin-service
+    restart: always
+    expose:
+      - "5050"
+    ports:
+      - "5050:5050"
