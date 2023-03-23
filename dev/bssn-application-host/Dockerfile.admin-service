@@ -1,7 +1,7 @@
-FROM openjdk:8-alpine
+FROM openjdk:17-oracle
 
-RUN apk add --no-cache tzdata
-ENV TZ Asia/Jakarta
+# Change timezone to Asia/Jakarta
+RUN ln -snf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && echo Asia/Jakarta > /etc/timezone
 
 WORKDIR /app
 COPY ./apps/admin-service.jar .
