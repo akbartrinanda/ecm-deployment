@@ -20,6 +20,8 @@ services:
     image: postgres:15.3
     container_name: postgres-bssn
     restart: always
+    ports:
+      - "54329:5432"
     environment:
       POSTGRES_USER: bssn
       POSTGRES_PASSWORD: P@ssw0rd!
@@ -27,15 +29,15 @@ services:
     volumes:
       - postgres-data-bssn:/var/lib/postgresql/data
 
-  pgbouncer-bssn:
-    image: pgbouncer/pgbouncer:latest
-    container_name: pgbouncer-bssn
-    ports:
-      - "54329:6432"
-    restart: always
-    build: 
-      context: .
-      dockerfile: Dockerfile.pgbouncer
+  # pgbouncer-bssn:
+  #   image: pgbouncer/pgbouncer:latest
+  #   container_name: pgbouncer-bssn
+  #   ports:
+  #     - "54329:6432"
+  #   restart: always
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile.pgbouncer
   
   redis-bssn:
     image: bitnami/redis:latest
