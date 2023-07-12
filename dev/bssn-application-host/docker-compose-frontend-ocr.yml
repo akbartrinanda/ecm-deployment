@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend-ocr:
+    image: frontend-ocr
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend-ocr
+    restart: always
+    expose:
+      - "80"
+    ports:
+      - "6090:80"
