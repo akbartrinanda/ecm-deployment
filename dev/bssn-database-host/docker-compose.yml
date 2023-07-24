@@ -47,7 +47,7 @@ services:
      - "6379:6379"
     restart: always
     environment:
-      # - ALLOW_EMPTY_PASSWORD=yes
+      - ALLOW_EMPTY_PASSWORD=yes
       - REDIS_PASSWORD=P@ssw0rd!
       - TZ=Asia/Jakarta
     volumes:
