@@ -13,7 +13,8 @@ services:
     volumes:
       - ecm-postgres-data-dev:/var/lib/postgresql/data
     networks:
-      - ecm-dev-network
+      ecm-dev-network:
+        driver: bridge
       
   ecm-solr-dev:
     image: solr:8.11.2
@@ -35,7 +36,8 @@ services:
       sh -c "precreate-core folder"
       sh -c "cp managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
     networks:
-      - ecm-dev-network
+      ecm-dev-network:
+        driver: bridge
   
   ecm-redis-dev:
     image: bitnami/redis:latest
@@ -49,7 +51,8 @@ services:
     volumes:
       - ecm-redis-data-dev:/data
     networks:
-      - ecm-dev-network
+      ecm-dev-network:
+        driver: bridge
 
 volumes:
   ecm-solr-data-dev: 

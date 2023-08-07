@@ -37,9 +37,5 @@ sudo docker network create ecm-dev-network
 echo -e "\e[1;32m mkdir ~/file-uploads-ecm \e[0m"
 mkdir ~/file-uploads-ecm
 
-echo -e "\e[1;32m cd ~/ecm-deployment/dev/ecm-database-host && docker-compose down && docker-compose up -d --build \e[0m"
-cd ~/ecm-deployment/dev/ecm-database-host && sudo docker-compose down && sudo docker-compose up -d --build
-
-echo -e "\e[1;32m cd ~/ecm-deployment/dev/ecm-application-host && docker-compose down && docker-compose up -d --build \e[0m"
-cd ~/ecm-deployment/dev/ecm-application-host && sudo docker-compose down && sudo docker-compose up -d --build
-cd ~
+cd ~/ecm-deployment/dev
+sudo docker-compose up -f docker-compose-database.yml -d --build

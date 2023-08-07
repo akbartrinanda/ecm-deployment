@@ -1,0 +1,45 @@
+version: '3'
+services:
+  ecm-admin-service-dev:
+    image: ecm-admin-service:dev
+    build:
+      context: .
+      dockerfile: Dockerfile.admin-service
+    restart: always
+    expose:
+      - "5050"
+    ports:
+      - "5050:5050"
+    networks:
+      ecm-dev-network:
+        driver: bridge
+
+  ecm-fp-service-dev:
+    image: ecm-fp-service:dev
+    build: 
+      context: .
+      dockerfile: Dockerfile.fp-service
+    restart: always
+    expose:
+      - "5051"
+    ports:
+      - "5051:5051"
+    volumes:
+      - /home/centos/ecm-file-uploads:/uploads
+    networks:
+      ecm-dev-network:
+        driver: bridge
+
+  ecm-frontend-dev:
+    image: ecm-frontend:dev
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend
+    restart: always
+    expose:
+      - "80"
+    ports:
+      - "6080:80"
+    networks:
+      ecm-dev-network:
+        driver: bridge
