@@ -22,7 +22,6 @@ services:
       - ecm-dev-network
       
   ecm-solr:
-    image: solr:dev
     container_name: ecm-solr-dev
     build: 
       context: .
@@ -54,7 +53,52 @@ services:
     networks:
       - ecm-dev-network
 
+  ecm-admin-service:
+    image: ecm-admin-service:dev
+    container_name: ecm-admin-service-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.admin-service
+    restart: always
+    expose:
+      - "5050"
+    ports:
+      - "5050:5050"
+    networks:
+      - ecm-dev-network
+
+  ecm-fp-service:
+    image: ecm-fp-service:dev
+    container_name: ecm-fp-service-dev
+    build: 
+      context: .
+      dockerfile: Dockerfile.fp-service
+    restart: always
+    expose:
+      - "5051"
+    ports:
+      - "5051:5051"
+    volumes:
+      - /home/centos/ecm-file-uploads:/uploads
+    networks:
+      - ecm-dev-network
+
+  ecm-frontend:
+    image: ecm-frontend:dev
+    container_name: ecm-frontend-dev
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend
+    restart: always
+    expose:
+      - "80"
+    ports:
+      - "6080:80"
+    networks:
+      - ecm-dev-network
+
 volumes:
   ecm-solr-data-dev: 
   ecm-postgres-data-dev:
   ecm-redis-data-dev:
+  
