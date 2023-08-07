@@ -1,5 +1,20 @@
 version: '3'
 services:
+  ecm-postgres-dev:
+    image: postgres:15.3
+    restart: always
+    ports:
+      - "54329:5432"
+    command: postgres -c 'max_connections=300'
+    environment:
+      POSTGRES_USER: ecm
+      POSTGRES_PASSWORD: P@ssw0rd!
+      TZ: Asia/Jakarta
+    volumes:
+      - ecm-postgres-data-dev:/var/lib/postgresql/data
+    networks:
+      - ecm-dev-network
+      
   ecm-solr-dev:
     image: solr:8.11.2
     build: 
@@ -19,21 +34,6 @@ services:
       sh -c "cp managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema"
       sh -c "precreate-core folder"
       sh -c "cp managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
-    networks:
-      - ecm-dev-network
-  
-  ecm-postgres-dev:
-    image: postgres:15.3
-    restart: always
-    ports:
-      - "54329:5432"
-    command: postgres -c 'max_connections=300'
-    environment:
-      POSTGRES_USER: ecm
-      POSTGRES_PASSWORD: P@ssw0rd!
-      TZ: Asia/Jakarta
-    volumes:
-      - ecm-postgres-data-dev:/var/lib/postgresql/data
     networks:
       - ecm-dev-network
   
