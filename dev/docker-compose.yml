@@ -1,13 +1,13 @@
-version: '3.4'
+version: '3.8'
 
 networks:
-    ecm-dev-network:
-        external: true
+  ecm-network:
+    driver: bridge
 
 services:
   ecm-postgres:
     image: postgres:15.3
-    container_name: ecm-postgres-dev
+    container_name: ecm-postgres
     restart: always
     ports:
       - "54329:5432"
@@ -17,13 +17,13 @@ services:
       POSTGRES_PASSWORD: P@ssw0rd!
       TZ: Asia/Jakarta
     volumes:
-      - ecm-postgres-data-dev:/var/lib/postgresql/data
+      - ecm-postgres-data:/var/lib/postgresql/data
     networks:
-      - ecm-dev-network
-      
+      - ecm-network
+
   ecm-solr:
     image: solr:8.11.2
-    container_name: ecm-solr-dev
+    container_name: ecm-solr
     user: "solr:solr"
     ports:
      - "7983:8983"
@@ -35,15 +35,15 @@ services:
     volumes:
       - ./config/security.json:/var/solr/data/security.json
       - ./config/managed-schema.xml:/managed-schema.xml
-      - ecm-solr-data-dev:/var/solr
+      - ecm-solr-data:/var/solr
     command: >
       sh -c "precreate-core document; cp managed-schema.xml /var/solr/data/document/conf/managed-schema; precreate-core document_bundle; cp managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema; precreate-core folder; cp managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
     networks:
-      - ecm-dev-network
+      - ecm-network
   
   ecm-redis:
     image: bitnami/redis:latest
-    container_name: ecm-redis-dev
+    container_name: ecm-redis
     ports:
      - "6379:6379"
     restart: always
@@ -52,20 +52,18 @@ services:
       - REDIS_PASSWORD=P@ssw0rd!
       - TZ=Asia/Jakarta
     volumes:
-      - ecm-redis-data-dev:/data
+      - ecm-redis-data:/data
     networks:
-      - ecm-dev-network
+      - ecm-network
 
   ecm-admin-service:
     image: openjdk:17-alpine
-    container_name: ecm-admin-service-dev
+    container_name: ecm-admin-service
     restart: always
-    expose:
-      - "5050"
     ports:
       - "5050:5050"
     networks:
-      - ecm-dev-network
+      - ecm-network
     environment:
       - TZ=Asia/Jakarta
     volumes:
@@ -75,14 +73,12 @@ services:
 
   ecm-fp-service:
     image: openjdk:17-alpine
-    container_name: ecm-fp-service-dev
+    container_name: ecm-fp-service
     restart: always
-    expose:
-      - "5051"
     ports:
       - "5051:5051"
     networks:
-      - ecm-dev-network
+      - ecm-network
     environment:
       - TZ=Asia/Jakarta
     volumes:
@@ -93,22 +89,21 @@ services:
 
   ecm-frontend:
     image: nginx:alpine
-    container_name: ecm-frontend-dev
+    container_name: ecm-frontend
     restart: always
-    expose:
-      - "80"
     ports:
-      - "6080:80"
+      - "80:80"
     networks:
-      - ecm-dev-network
+      - ecm-network
     environment:
       - TZ=Asia/Jakarta
     volumes:
       - ./apps/frontend.tar.gz:/app/frontend.tar.gz
+      - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
     command: >
       sh -c "apk add --no-cache tzdata && tar -xf /app/frontend.tar.gz -C /usr/share/nginx/html/ && nginx -g 'daemon off;'"
 
 volumes:
-  ecm-solr-data-dev: 
-  ecm-postgres-data-dev:
-  ecm-redis-data-dev:
+  ecm-solr-data: 
+  ecm-postgres-data:
+  ecm-redis-data:
