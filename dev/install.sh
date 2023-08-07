@@ -38,5 +38,4 @@ echo -e "\e[1;32m mkdir ~/file-uploads-ecm \e[0m"
 mkdir ~/file-uploads-ecm
 
 cd ~/ecm-deployment/dev
-sudo docker-compose up -f docker-compose-database.yml -d
-sudo docker-compose up -f docker-compose-application.yml -d
+sudo docker-compose up -d

@@ -1,9 +1,0 @@
-FROM openjdk:17-alpine
-
-RUN apk add --no-cache tzdata
-ENV TZ Asia/Jakarta
-
-WORKDIR /app
-COPY ./apps/admin-service.jar .
-
-ENTRYPOINT ["java", "-jar", "admin-service.jar"]

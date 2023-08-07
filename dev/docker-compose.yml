@@ -22,16 +22,19 @@ services:
       - ecm-dev-network
       
   ecm-solr:
+    image: solr:8.11.2
     container_name: ecm-solr-dev
-    build: 
-      context: .
-      dockerfile: Dockerfile.solr
+    user: "solr:solr"
     ports:
      - "7983:8983"
     restart: always
     environment:
-      TZ: Asia/Jakarta
+      - TZ=Asia/Jakarta
+      - SOLR_USER=solr
+      - SOLR_GROUP=solr
     volumes:
+      - ./config/security.json:/var/solr/data/security.json
+      - ./config/managed-schema.xml:/managed-schema.xml
       - ecm-solr-data-dev:/var/solr
     command: >
       sh -c "precreate-core document; cp managed-schema.xml /var/solr/data/document/conf/managed-schema; precreate-core document_bundle; cp managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema; precreate-core folder; cp managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
@@ -54,11 +57,8 @@ services:
       - ecm-dev-network
 
   ecm-admin-service:
-    image: ecm-admin-service:dev
+    image: openjdk:17-alpine
     container_name: ecm-admin-service-dev
-    build:
-      context: .
-      dockerfile: Dockerfile.admin-service
     restart: always
     expose:
       - "5050"
@@ -66,29 +66,34 @@ services:
       - "5050:5050"
     networks:
       - ecm-dev-network
+    environment:
+      - TZ=Asia/Jakarta
+    volumes:
+      - ./apps/admin-service.jar:/app/admin-service.jar
+    command: >
+      sh -c "java -jar /app/admin-service.jar"
 
   ecm-fp-service:
-    image: ecm-fp-service:dev
+    image: openjdk:17-alpine
     container_name: ecm-fp-service-dev
-    build: 
-      context: .
-      dockerfile: Dockerfile.fp-service
     restart: always
     expose:
       - "5051"
     ports:
       - "5051:5051"
-    volumes:
-      - /home/centos/ecm-file-uploads:/uploads
     networks:
       - ecm-dev-network
+    environment:
+      - TZ=Asia/Jakarta
+    volumes:
+      - ./apps/fp-service.jar:/app/fp-service.jar
+      - /home/centos/ecm-file-uploads:/uploads
+    command: >
+      sh -c "apk add --no-cache fontconfig ttf-dejavu && java -jar /app/fp-service.jar"
 
   ecm-frontend:
-    image: ecm-frontend:dev
+    image: nginx:alpine
     container_name: ecm-frontend-dev
-    build: 
-      context: .
-      dockerfile: Dockerfile.frontend
     restart: always
     expose:
       - "80"
@@ -96,9 +101,14 @@ services:
       - "6080:80"
     networks:
       - ecm-dev-network
+    environment:
+      - TZ=Asia/Jakarta
+    volumes:
+      - ./apps/frontend.tar.gz:/app/frontend.tar.gz
+    command: >
+      sh -c "apk add --no-cache tzdata && tar -xf /app/frontend.tar.gz -C /usr/share/nginx/html/ && nginx -g 'daemon off;'"
 
 volumes:
   ecm-solr-data-dev: 
   ecm-postgres-data-dev:
   ecm-redis-data-dev:
-  

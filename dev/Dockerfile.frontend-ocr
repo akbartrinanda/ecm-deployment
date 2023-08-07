@@ -1,8 +1,0 @@
-FROM nginx:alpine
-
-RUN apk add --no-cache tzdata
-ENV TZ Asia/Jakarta
-
-WORKDIR /app
-COPY ./apps/frontend-ocr.tar.gz .
-RUN tar -xf frontend-ocr.tar.gz -C /usr/share/nginx/html/
