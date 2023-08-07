@@ -1,7 +1,7 @@
 version: '3'
 services:
-  fp-service-bssn:
-    image: fp-service-bssn
+  ecm-fp-service-dev:
+    image: ecm-fp-service:dev
     build: 
       context: .
       dockerfile: Dockerfile.fp-service
@@ -11,4 +11,6 @@ services:
     ports:
       - "5051:5051"
     volumes:
-      - /home/user/uploads-bssn:/uploads
+      - /home/centos/ecm-file-uploads:/uploads
+    networks:
+      - ecm-dev-network

@@ -1,0 +1,57 @@
+version: '3'
+services:
+  ecm-solr-dev:
+    image: solr:8.11.2
+    build: 
+      context: .
+      dockerfile: Dockerfile.solr
+    ports:
+     - "7983:8983"
+    restart: always
+    environment:
+      TZ: Asia/Jakarta
+    volumes:
+      - ecm-solr-data-dev:/var/solr
+    command: >
+      sh -c "precreate-core document"
+      sh -c "cp managed-schema.xml /var/solr/data/document/conf/managed-schema"
+      sh -c "precreate-core document_bundle"
+      sh -c "cp managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema"
+      sh -c "precreate-core folder"
+      sh -c "cp managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
+    networks:
+      - ecm-dev-network
+  
+  ecm-postgres-dev:
+    image: postgres:15.3
+    restart: always
+    ports:
+      - "54329:5432"
+    command: postgres -c 'max_connections=300'
+    environment:
+      POSTGRES_USER: ecm
+      POSTGRES_PASSWORD: P@ssw0rd!
+      TZ: Asia/Jakarta
+    volumes:
+      - ecm-postgres-data-dev:/var/lib/postgresql/data
+    networks:
+      - ecm-dev-network
+  
+  ecm-redis-dev:
+    image: bitnami/redis:latest
+    ports:
+     - "6379:6379"
+    restart: always
+    environment:
+      # - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_PASSWORD=P@ssw0rd!
+      - TZ=Asia/Jakarta
+    volumes:
+      - ecm-redis-data-dev:/data
+    networks:
+      - ecm-dev-network
+
+volumes:
+  ecm-solr-data-dev: 
+  ecm-postgres-data-dev:
+  ecm-redis-data-dev:

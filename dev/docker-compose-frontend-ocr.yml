@@ -1,7 +1,7 @@
 version: '3'
 services:
-  frontend-ocr:
-    image: frontend-ocr
+  ecm-frontend-ocr-dev:
+    image: ecm-frontend-ocr:dev
     build: 
       context: .
       dockerfile: Dockerfile.frontend-ocr
@@ -10,3 +10,5 @@ services:
       - "80"
     ports:
       - "6090:80"
+    networks:
+      - ecm-dev-network

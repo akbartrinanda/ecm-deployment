@@ -1,7 +1,7 @@
 version: '3'
 services:
-  admin-service-bssn:
-    image: admin-service-bssn
+  ecm-admin-service-dev:
+    image: ecm-admin-service:dev
     build:
       context: .
       dockerfile: Dockerfile.admin-service
@@ -10,3 +10,5 @@ services:
       - "5050"
     ports:
       - "5050:5050"
+    networks:
+      - ecm-dev-network
