@@ -3,9 +3,9 @@ version: '3.4'
 networks:
     ecm-dev-network:
         external: true
-        
+
 services:
-  ecm-postgres-dev:
+  ecm-postgres:
     image: postgres:15.3
     restart: always
     ports:
@@ -20,7 +20,7 @@ services:
     networks:
       - ecm-dev-network
       
-  ecm-solr-dev:
+  ecm-solr:
     image: solr:8.11.2
     build: 
       context: .
@@ -42,7 +42,7 @@ services:
     networks:
       - ecm-dev-network
   
-  ecm-redis-dev:
+  ecm-redis:
     image: bitnami/redis:latest
     ports:
      - "6379:6379"

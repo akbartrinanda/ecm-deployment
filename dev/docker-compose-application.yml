@@ -5,7 +5,7 @@ networks:
         external: true
 
 services:
-  ecm-admin-service-dev:
+  ecm-admin-service:
     image: ecm-admin-service:dev
     build:
       context: .
@@ -18,7 +18,7 @@ services:
     networks:
       - ecm-dev-network
 
-  ecm-fp-service-dev:
+  ecm-fp-service:
     image: ecm-fp-service:dev
     build: 
       context: .
@@ -33,7 +33,7 @@ services:
     networks:
       - ecm-dev-network
 
-  ecm-frontend-dev:
+  ecm-frontend:
     image: ecm-frontend:dev
     build: 
       context: .
