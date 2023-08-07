@@ -31,11 +31,11 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 echo -e "\e[1;32m sudo docker-compose --version \e[0m"
 sudo docker-compose --version 
 
-echo -e "\e[1;32m sudo docker network create ecm-dev-network \e[0m"
-sudo docker network create ecm-dev-network
-
 echo -e "\e[1;32m mkdir ~/file-uploads-ecm \e[0m"
 mkdir ~/file-uploads-ecm
 
+echo -e "\e[1;32m ~/ecm-deployment/dev \e[0m"
 cd ~/ecm-deployment/dev
+
+echo -e "\e[1;32m sudo docker-compose up -d \e[0m"
 sudo docker-compose up -d
