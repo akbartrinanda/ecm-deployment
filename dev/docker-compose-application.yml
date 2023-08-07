@@ -7,6 +7,7 @@ networks:
 services:
   ecm-admin-service:
     image: ecm-admin-service:dev
+    container_name: ecm-admin-service-dev
     build:
       context: .
       dockerfile: Dockerfile.admin-service
@@ -20,6 +21,7 @@ services:
 
   ecm-fp-service:
     image: ecm-fp-service:dev
+    container_name: ecm-fp-service-dev
     build: 
       context: .
       dockerfile: Dockerfile.fp-service
@@ -35,6 +37,7 @@ services:
 
   ecm-frontend:
     image: ecm-frontend:dev
+    container_name: ecm-frontend-dev
     build: 
       context: .
       dockerfile: Dockerfile.frontend
