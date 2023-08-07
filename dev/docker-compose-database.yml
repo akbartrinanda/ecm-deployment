@@ -14,7 +14,7 @@ services:
       - ecm-postgres-data-dev:/var/lib/postgresql/data
     networks:
       ecm-dev-network:
-        driver: bridge
+        external: true
       
   ecm-solr-dev:
     image: solr:8.11.2
@@ -37,7 +37,7 @@ services:
       sh -c "cp managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
     networks:
       ecm-dev-network:
-        driver: bridge
+        external: true
   
   ecm-redis-dev:
     image: bitnami/redis:latest
@@ -52,7 +52,7 @@ services:
       - ecm-redis-data-dev:/data
     networks:
       ecm-dev-network:
-        driver: bridge
+        external: true
 
 volumes:
   ecm-solr-data-dev: 

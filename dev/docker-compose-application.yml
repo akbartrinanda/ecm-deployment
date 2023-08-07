@@ -12,7 +12,7 @@ services:
       - "5050:5050"
     networks:
       ecm-dev-network:
-        driver: bridge
+        external: true
 
   ecm-fp-service-dev:
     image: ecm-fp-service:dev
@@ -28,7 +28,7 @@ services:
       - /home/centos/ecm-file-uploads:/uploads
     networks:
       ecm-dev-network:
-        driver: bridge
+        external: true
 
   ecm-frontend-dev:
     image: ecm-frontend:dev
@@ -42,4 +42,4 @@ services:
       - "6080:80"
     networks:
       ecm-dev-network:
-        driver: bridge
+        external: true
