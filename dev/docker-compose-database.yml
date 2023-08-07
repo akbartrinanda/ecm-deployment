@@ -21,7 +21,7 @@ services:
       - ecm-dev-network
       
   ecm-solr:
-    image: solr:8.11.2
+    image: solr:dev
     build: 
       context: .
       dockerfile: Dockerfile.solr
@@ -33,12 +33,7 @@ services:
     volumes:
       - ecm-solr-data-dev:/var/solr
     command: >
-      sh -c "precreate-core document"
-      sh -c "cp managed-schema.xml /var/solr/data/document/conf/managed-schema"
-      sh -c "precreate-core document_bundle"
-      sh -c "cp managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema"
-      sh -c "precreate-core folder"
-      sh -c "cp managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
+      sh -c "precreate-core document; cp managed-schema.xml /var/solr/data/document/conf/managed-schema; precreate-core document_bundle; cp managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema; precreate-core folder; cp managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
     networks:
       - ecm-dev-network
   
