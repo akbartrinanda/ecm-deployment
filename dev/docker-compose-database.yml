@@ -1,4 +1,9 @@
 version: '3.4'
+
+networks:
+    ecm-dev-network:
+        external: true
+        
 services:
   ecm-postgres-dev:
     image: postgres:15.3
