@@ -1,4 +1,9 @@
 version: '3'
+
+networks:
+    ecm-dev-network:
+        external: true
+
 services:
   ecm-admin-service-dev:
     image: ecm-admin-service:dev
@@ -11,8 +16,7 @@ services:
     ports:
       - "5050:5050"
     networks:
-      ecm-dev-network:
-        external: true
+      - ecm-dev-network
 
   ecm-fp-service-dev:
     image: ecm-fp-service:dev
@@ -27,8 +31,7 @@ services:
     volumes:
       - /home/centos/ecm-file-uploads:/uploads
     networks:
-      ecm-dev-network:
-        external: true
+      - ecm-dev-network
 
   ecm-frontend-dev:
     image: ecm-frontend:dev
@@ -41,5 +44,4 @@ services:
     ports:
       - "6080:80"
     networks:
-      ecm-dev-network:
-        external: true
+      - ecm-dev-network
