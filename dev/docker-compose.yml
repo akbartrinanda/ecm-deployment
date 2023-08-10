@@ -103,6 +103,21 @@ services:
     command: >
       sh -c "apk add --no-cache tzdata && tar -xf /app/frontend.tar.gz -C /usr/share/nginx/html/ && nginx -g 'daemon off;'"
 
+  ecm-task-service:
+    image: openjdk:17-alpine
+    container_name: ecm-task-service
+    restart: always
+    ports:
+      - "5053:5053"
+    networks:
+      - ecm-network
+    environment:
+      - TZ=Asia/Jakarta
+    volumes:
+      - ./apps/task-service.jar:/app/task-service.jar
+    command: >
+      sh -c "java -jar /app/task-service.jar"
+
 volumes:
   ecm-solr-data: 
   ecm-postgres-data:
