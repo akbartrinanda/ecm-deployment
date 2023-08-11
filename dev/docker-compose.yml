@@ -108,7 +108,7 @@ services:
     container_name: ecm-task-service
     restart: always
     ports:
-      - "5053:5053"
+      - "5052:5052"
     networks:
       - ecm-network
     environment:
