@@ -129,12 +129,12 @@ services:
     environment:
       - TZ=Asia/Jakarta
     volumes:
-      - ./apps/ecm-nodered:/app
+      - ./apps/docmgt-nodered:/app
       - ecm-nodered-data:/data
       - ./config/flow.json:/data/flow.json
       - ./config/settings.js:/data/settings.js
     command: >
-      sh -c "cd app && npm ci --force && npm start"
+      sh -c "cd ./app && npm install --force && npm start"
 
 volumes:
   ecm-solr-data: 
