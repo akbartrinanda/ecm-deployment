@@ -83,7 +83,7 @@ services:
       - TZ=Asia/Jakarta
     volumes:
       - ./apps/fp-service.jar:/app/fp-service.jar
-      - /home/centos/ecm-file-uploads:/uploads
+      - ~/ecm-file-uploads:/uploads
     command: >
       sh -c "apk add --no-cache fontconfig ttf-dejavu && java -jar /app/fp-service.jar"
 
@@ -135,6 +135,27 @@ services:
       - ./config/settings.js:/data/settings.js
     command: >
       sh -c "cd ./app && npm install --force && npm start"
+
+  ecm-ocr-service:
+    image: python:3.9.17-bullseye
+    container_name: ecm-ocr-service
+    restart: always
+    ports:
+      - "5053:5053"
+    networks:
+      - ecm-network
+    environment:
+      - TZ=Asia/Jakarta
+    volumes:
+      - ./apps/OCR-PaddleOCR:/app
+      - ~/ecm-file-uploads:/uploads
+    command: >
+      sh -c "apt-get update && apt-get install -y libgl1"
+      sh -c "cd /app"
+      sh -c "pip3 install pyOpenSSL"
+      sh -c "pip3 install -r requirements.txt"
+      sh -c "pip3 install -r ppstructure/kie/requirements.txt"
+      sh -c "cd /app/ppstructure && python3 main.py"
 
 volumes:
   ecm-solr-data: 
