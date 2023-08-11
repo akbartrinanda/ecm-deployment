@@ -134,7 +134,7 @@ services:
       - ./config/flow.json:/data/flow.json
       - ./config/settings.js:/data/settings.js
     command: >
-      sh -c "cd ./app/ecm-nodered && npm ci --force && npm start"
+      sh -c "cd ./app/ecm-nodered && npm install --force && npm start"
 
 volumes:
   ecm-solr-data: 
