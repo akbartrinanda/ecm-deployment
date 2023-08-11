@@ -118,7 +118,25 @@ services:
     command: >
       sh -c "java -jar /app/task-service.jar"
 
+  ecm-nodered-service:
+    image: ecm-nodered:latest
+    container_name: ecm-nodered-service
+    restart: always
+    ports:
+      - "1880:1880"
+    networks:
+      - ecm-network
+    environment:
+      - TZ=Asia/Jakarta
+    volumes:
+      - ecm-nodered-data:/data
+      - ./config/flow.json:/data/flow.json
+      - ./config/settings.js:/data/settings.js
+    command: >
+      sh -c "npm start"
+
 volumes:
   ecm-solr-data: 
   ecm-postgres-data:
   ecm-redis-data:
+  ecm-nodered-data:
