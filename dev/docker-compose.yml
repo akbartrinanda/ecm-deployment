@@ -83,7 +83,7 @@ services:
       - TZ=Asia/Jakarta
     volumes:
       - ./apps/fp-service.jar:/app/fp-service.jar
-      - ~/ecm-file-uploads:/uploads
+      - /home/centos/ecm-file-uploads:/uploads
     command: >
       sh -c "apk add --no-cache fontconfig ttf-dejavu && java -jar /app/fp-service.jar"
 
