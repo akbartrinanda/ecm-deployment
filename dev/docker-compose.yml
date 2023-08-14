@@ -45,10 +45,10 @@ services:
     image: bitnami/redis:latest
     container_name: ecm-redis
     ports:
-     - "6379:6379"
+     - "5057:6379"
     restart: always
     environment:
-      - ALLOW_EMPTY_PASSWORD=yes
+      # - ALLOW_EMPTY_PASSWORD=yes
       - REDIS_PASSWORD=P@ssw0rd!
       - TZ=Asia/Jakarta
     volumes:
