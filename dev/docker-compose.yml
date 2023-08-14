@@ -108,7 +108,7 @@ services:
     container_name: ecm-task-service
     restart: always
     ports:
-      - "5053:5053"
+      - "5052:5052"
     networks:
       - ecm-network
     environment:
@@ -150,12 +150,7 @@ services:
       - ./apps/OCR-PaddleOCR:/app
       - ~/ecm-file-uploads:/uploads
     command: >
-      sh -c "apt-get update && apt-get install -y libgl1"
-      sh -c "cd /app"
-      sh -c "pip3 install pyOpenSSL"
-      sh -c "pip3 install -r requirements.txt"
-      sh -c "pip3 install -r ppstructure/kie/requirements.txt"
-      sh -c "cd /app/ppstructure && python3 main.py"
+      sh -c "apt-get update && apt-get install -y libgl1 && cd /app && pip3 install pyOpenSSL && pip3 install -r requirements.txt && pip3 install -r ppstructure/kie/requirements.txt && cd /app/ppstructure && python3 main.py"
 
 volumes:
   ecm-solr-data: 
