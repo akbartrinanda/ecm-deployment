@@ -92,7 +92,7 @@ services:
     container_name: ecm-frontend
     restart: always
     ports:
-      - "80:80"
+      - "5056:80"
     networks:
       - ecm-network
     environment:
