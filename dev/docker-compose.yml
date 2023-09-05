@@ -34,10 +34,10 @@ services:
       - SOLR_GROUP=solr
     volumes:
       - ./config/security.json:/var/solr/data/security.json
-      - ./config/managed-schema.xml:/managed-schema.xml
+      - ./config/managed-schema.xml:/config/managed-schema.xml
       - ecm-solr-data:/var/solr
     command: >
-      sh -c "precreate-core document; cp managed-schema.xml /var/solr/data/document/conf/managed-schema; precreate-core document_bundle; cp managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema; precreate-core folder; cp managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
+      sh -c "precreate-core document; cp /config/managed-schema.xml /var/solr/data/document/conf/managed-schema; precreate-core document_bundle; cp /config/managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema; precreate-core folder; cp /config/managed-schema.xml /var/solr/data/folder/conf/managed-schema; exec solr -f"
     networks:
       - ecm-network
   
