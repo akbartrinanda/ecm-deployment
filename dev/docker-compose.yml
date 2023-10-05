@@ -174,6 +174,30 @@ services:
     command: >
       sh -c "apk add --no-cache tzdata && tar -xf /app/frontend-ocr.tar.gz -C /usr/share/nginx/html/ && nginx -g 'daemon off;'"
 
+  ecm-ocr2-service:
+    image: python:3.9.17-bullseye
+    container_name: ecm-ocr2-service
+    restart: always
+    ports:
+      - "5054:8000"
+    networks:
+      - ecm-network
+    environment:
+      - TZ=Asia/Jakarta
+    volumes:
+      - ./apps/ocr-preprocessing:/app
+    command: >
+      sh -c "apt-get update;
+      apt-get install -y libgl1;
+      apt-get -y install tesseract-ocr;
+      apt-get -y install ffmpeg libsm6 libxext6;
+      apt-get -y install tesseract-ocr-eng;
+      apt-get install -y tesseract-ocr-ind
+      cd /app;
+      pip3 install pyOpenSSL;
+      pip3 install -r requirements.txt;
+      uvicorn main:app --host 0.0.0.0;"
+
 volumes:
   ecm-solr-data: 
   ecm-postgres-data:
