@@ -37,15 +37,15 @@ services:
       - ./config/managed-schema.xml:/config/managed-schema.xml
       - ecm-solr-data:/var/solr
     command: >
-      sh -c "precreate-core document; 
-      cp /config/managed-schema.xml /var/solr/data/document/conf/managed-schema; 
-      precreate-core document_bundle; 
-      cp /config/managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema; 
-      precreate-core folder; 
-      cp /config/managed-schema.xml /var/solr/data/folder/conf/managed-schema; 
-      precreate-core dictionary;
-      cp /config/managed-schema.xml /var/solr/data/dictionary/conf/managed-schema;
-      exec solr -f"
+      sh -c "precreate-core document \ 
+      && cp /config/managed-schema.xml /var/solr/data/document/conf/managed-schema \ 
+      && precreate-core document_bundle \ 
+      && cp /config/managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema \ 
+      && precreate-core folder \ 
+      && cp /config/managed-schema.xml /var/solr/data/folder/conf/managed-schema \ 
+      && precreate-core dictionary \
+      && cp /config/managed-schema.xml /var/solr/data/dictionary/conf/managed-schema \
+      && exec solr -f"
     networks:
       - ecm-network
   
@@ -157,7 +157,14 @@ services:
       - ./apps/docmgt-ocr:/app
       - /home/centos/ecm-file-uploads:/uploads
     command: >
-      sh -c "apt-get update && apt-get install -y libgl1 && cd /app && pip3 install pyOpenSSL && pip3 install -r requirements.user-defined.txt && pip3 install -r requirements.txt && pip3 install -r ppstructure/kie/requirements.txt && python3 main.py"
+      sh -c "apt-get update \
+      && apt-get install -y libgl1 \
+      && cd /app \
+      && pip3 install pyOpenSSL \
+      && pip3 install -r requirements.user-defined.txt \
+      && pip3 install -r requirements.txt \
+      && pip3 install -r ppstructure/kie/requirements.txt \
+      && python3 main.py"
 
   ecm-ocr2-frontend:
     image: nginx:alpine
