@@ -187,16 +187,11 @@ services:
     volumes:
       - ./apps/ocr-preprocessing:/app
     command: >
-      sh -c "apt-get update;
-      apt-get install -y libgl1;
-      apt-get -y install tesseract-ocr;
-      apt-get -y install ffmpeg libsm6 libxext6;
-      apt-get -y install tesseract-ocr-eng;
-      apt-get install -y tesseract-ocr-ind
-      cd /app;
-      pip3 install pyOpenSSL;
-      pip3 install -r requirements.txt;
-      uvicorn main:app --host 0.0.0.0;"
+      sh -c "apt-get update"
+      sh -c "apt-get install -y libgl1"
+      sh -c "pip3 install pyOpenSSL"
+      sh -c "pip3 install -r requirements.txt"
+      bash -c "uvicorn main:app --host 0.0.0.0"
 
 volumes:
   ecm-solr-data: 
