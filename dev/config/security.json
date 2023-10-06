@@ -1,23 +1,16 @@
 {
-    "authentication": {
-        "blockUnknown": true,
-        "class": "solr.BasicAuthPlugin",
-        "credentials": {
-            "solr": "rLKynpfzXC8foQZVGWNzBgS+1unKO1bb0RpEhCCtS+Y= cHNja2liMXp4MnZ3b2ZwZg=="
-        },
-        "realm": "My Solr users",
-        "forwardCredentials": false
-    },
-    "authorization": {
-        "class": "solr.RuleBasedAuthorizationPlugin",
-        "permissions": [
-            {
-                "name": "security-edit",
-                "role": "admin"
-            }
-        ],
-        "user-role": {
-            "solr": "admin"
-        }
-    }
-}
+  "authentication":{
+    "blockUnknown":true,
+    "class":"solr.BasicAuthPlugin",
+    "credentials":{
+      "solr":"rLKynpfzXC8foQZVGWNzBgS+1unKO1bb0RpEhCCtS+Y= cHNja2liMXp4MnZ3b2ZwZg==",
+      "client":"yit0cwKTPej5A5NrCME6Q5+GWwicgS79xZhjuxQEECs= DlaMBNfJzzG+EsDI04WOkroItbJTQY7OgsS3xY01JX0="},
+    "realm":"My Solr users",
+    "forwardCredentials":false,
+    "":{"v":0}},
+  "authorization":{
+    "class":"solr.RuleBasedAuthorizationPlugin",
+    "permissions":[{
+        "name":"security-edit",
+        "role":"admin"}],
+    "user-role":{"solr":"admin"}}}
