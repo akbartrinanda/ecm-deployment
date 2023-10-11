@@ -454,6 +454,8 @@
 
   <field name="all" type="text_general" multiValued="true" indexed="true" stored="false"/>
   <copyField source="*_t" dest="all"/>
+  <copyField source="*_txt" dest="all"/>
+  <copyField source="*_s" dest="all"/>
   <copyField source="*_ss" dest="all"/>
   <copyField source="*_l" dest="all"/>
   <copyField source="*_ls" dest="all"/>
