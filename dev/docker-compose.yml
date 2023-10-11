@@ -32,6 +32,7 @@ services:
       - TZ=Asia/Jakarta
       - SOLR_USER=solr
       - SOLR_GROUP=solr
+      - SOLR_OPTS=-Dsolr.jetty.request.header.Access-Control-Allow-Origin=*
     volumes:
       - ./config/security.json:/var/solr/data/security.json
       - ./config/managed-schema.xml:/config/managed-schema.xml
