@@ -45,6 +45,8 @@ services:
       && cp /config/managed-schema.xml /var/solr/data/folder/conf/managed-schema \ 
       && precreate-core dictionary \
       && cp /config/managed-schema.xml /var/solr/data/dictionary/conf/managed-schema \
+      && precreate-core test \
+      && cp /config/managed-schema.xml /var/solr/data/test/conf/managed-schema \
       && exec solr -f"
     networks:
       - ecm-network
