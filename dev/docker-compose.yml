@@ -37,17 +37,7 @@ services:
       - ./config/managed-schema.xml:/config/managed-schema.xml
       - ecm-solr-data:/var/solr
     command: >
-      sh -c "precreate-core document" 
-      sh -c "cp /config/managed-schema.xml /var/solr/data/document/conf/managed-schema"
-      sh -c "precreate-core document_bundle"
-      sh -c "cp /config/managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema"
-      sh -c "precreate-core folder"
-      sh -c "cp /config/managed-schema.xml /var/solr/data/folder/conf/managed-schema"
-      sh -c "precreate-core dictionary"
-      sh -c "cp /config/managed-schema.xml /var/solr/data/dictionary/conf/managed-schema"
-      sh -c "precreate-core test"
-      sh -c "cp /config/managed-schema.xml /var/solr/data/test/conf/managed-schema"
-      sh -c "exec solr -f"
+      sh -c "precreate-core document && cp /config/managed-schema.xml /var/solr/data/document/conf/managed-schema && precreate-core document_bundle && cp /config/managed-schema.xml /var/solr/data/document_bundle/conf/managed-schema && precreate-core folder && cp /config/managed-schema.xml /var/solr/data/folder/conf/managed-schema && precreate-core dictionary && cp /config/managed-schema.xml /var/solr/data/dictionary/conf/managed-schema && precreate-core test && cp /config/managed-schema.xml /var/solr/data/test/conf/managed-schema && exec solr -f"
     networks:
       - ecm-network
   
