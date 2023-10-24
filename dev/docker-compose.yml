@@ -130,7 +130,7 @@ services:
     volumes:
       - ./apps/docmgt-nodered:/app
       - ecm-nodered-data:/data
-      - ./config/flow.json:/data/flow.json
+      - ./config/flows.json:/data/flows.json
       - ./config/settings.js:/data/settings.js
     command: >
       sh -c "cd ./app && npm install --force && npm start"
