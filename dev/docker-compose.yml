@@ -130,7 +130,7 @@ services:
     volumes:
       - ./apps/docmgt-nodered:/app
       - ecm-nodered-data:/data
-      - /home/centos/ecm-deployment/dev/config:/data
+      # - /home/centos/ecm-deployment/dev/config:/data
     command: >
       sh -c "cd ./app && npm install --force && npm start"
 
