@@ -144,7 +144,7 @@ module.exports = {
       level: "debug",
       metrics: false,
       audit: false,
-      handler: require("../src/logger_con.js")
+      handler: require("../apps/docmgt-nodered/src/logger_con.js")
     },
     
     // file logger
@@ -155,7 +155,7 @@ module.exports = {
       logfilename: path.join(process.cwd(), "nr.log"), // the default logfile
       divider: "\t", // col divider
       newline: "\n", // newline characters typically \r\n (CRLF) or \n (LF)
-      handler: require("../src/logger_file.js")
+      handler: require("../apps/docmgt-nodered/src/logger_file.js")
     },
  
     /*
@@ -167,7 +167,7 @@ module.exports = {
       syslogserver: "udp://nas:514/NR", // syslog server [tcp|udp]://host[:port]/program
       rfc3164: true, //set to false to use RFC 5424 syslog header format; default is true for the older RFC 3164 format.
       facility: "Local0", //  Kernel, User, System, Audit, Alert, Local0 - Local7
-      handler: require("../src/logger_syslog.js")
+      handler: require("../apps/docmgt-nodered/src/logger_syslog.js")
     }
     */
   },
@@ -201,8 +201,8 @@ module.exports = {
     page: {
       title: "Documgt S",
       // favicon: "/absolute/path/to/theme/icon",
-      css: path.join(__dirname, '/src/css', 'custom.css'),
-      scripts: path.join(__dirname, '/src/js', 'custom.js')  // As of 0.17
+      css: path.join('../apps/docmgt-nodered/src/css', 'custom.css'),
+      scripts: path.join('../apps/docmgt-nodered/src/js', 'custom.js')  // As of 0.17
     },
     header: {
       title: "Documgt Workflow",
