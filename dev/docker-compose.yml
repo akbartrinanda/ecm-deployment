@@ -203,7 +203,7 @@ services:
     container_name: ecm-fp-v2-service
     restart: always
     ports:
-      - "9085:5051"
+      - "9087:5051"
     networks:
       - ecm-network
     environment:
