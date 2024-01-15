@@ -169,9 +169,9 @@ services:
       && pip3 install -r ppstructure/kie/requirements.txt \
       && python3 main.py"
 
-  ecm-ocr2-frontend:
+  ecm-frontend-ocr:
     image: nginx:alpine
-    container_name: ecm-ocr2-frontend
+    container_name: ecm-frontend-ocr
     restart: always
     ports:
       - "5055:80"
